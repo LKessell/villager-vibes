@@ -1,7 +1,16 @@
+import { useState, useEffect } from 'react';
 import './App.css';
+import fetchVillagers from '../../apiCalls';
 import IconContainer from '../IconContainer/IconContainer';
 
-function App() {
+const App = () => {
+  const [allVillagers, setAllVillagers] = useState([]);
+
+  useEffect(() => {
+    fetchVillagers()
+      .then(data => setAllVillagers(data))
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
