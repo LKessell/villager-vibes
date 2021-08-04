@@ -7,6 +7,8 @@ body {
   font-family: 'Bubblegum Sans', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-color: #79d6c3;
 }
 
 code {
