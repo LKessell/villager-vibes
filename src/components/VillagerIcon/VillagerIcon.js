@@ -1,8 +1,8 @@
 import './VillagerIcon.css';
 
-const VillagerIcon = ({ id, img }) => {
+const VillagerIcon = ({ id, img, altText }) => {
   return (
-    <img src={img} id={id} />
+    <img src={img} id={id} alt={altText} />
   );
 }
 
