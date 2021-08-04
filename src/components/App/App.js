@@ -17,7 +17,7 @@ const App = () => {
         <h1>Villager Vibes</h1>
       </header>
       <main>
-        <IconContainer />
+        <IconContainer allVillagers={allVillagers} />
       </main>
     </div>
   );
