@@ -1,4 +1,5 @@
 import './App.css';
+import IconContainer from '../IconContainer/IconContainer';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         <h1>Villager Vibes</h1>
       </header>
       <main>
+        <IconContainer />
       </main>
     </div>
   );
