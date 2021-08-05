@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/villager-vibes/static/css/main.ddd7b19e.chunk.css",
-    "main.js": "/villager-vibes/static/js/main.cc5bee6a.chunk.js",
-    "main.js.map": "/villager-vibes/static/js/main.cc5bee6a.chunk.js.map",
-    "runtime-main.js": "/villager-vibes/static/js/runtime-main.7103ae01.js",
-    "runtime-main.js.map": "/villager-vibes/static/js/runtime-main.7103ae01.js.map",
-    "static/js/2.67cd252c.chunk.js": "/villager-vibes/static/js/2.67cd252c.chunk.js",
-    "static/js/2.67cd252c.chunk.js.map": "/villager-vibes/static/js/2.67cd252c.chunk.js.map",
-    "static/js/3.12456b79.chunk.js": "/villager-vibes/static/js/3.12456b79.chunk.js",
-    "static/js/3.12456b79.chunk.js.map": "/villager-vibes/static/js/3.12456b79.chunk.js.map",
+    "main.css": "/villager-vibes/static/css/main.36da05c3.chunk.css",
+    "main.js": "/villager-vibes/static/js/main.01c80e8b.chunk.js",
+    "main.js.map": "/villager-vibes/static/js/main.01c80e8b.chunk.js.map",
+    "runtime-main.js": "/villager-vibes/static/js/runtime-main.34eee9cf.js",
+    "runtime-main.js.map": "/villager-vibes/static/js/runtime-main.34eee9cf.js.map",
+    "static/js/2.15cebeb4.chunk.js": "/villager-vibes/static/js/2.15cebeb4.chunk.js",
+    "static/js/2.15cebeb4.chunk.js.map": "/villager-vibes/static/js/2.15cebeb4.chunk.js.map",
+    "static/js/3.74d5cbc4.chunk.js": "/villager-vibes/static/js/3.74d5cbc4.chunk.js",
+    "static/js/3.74d5cbc4.chunk.js.map": "/villager-vibes/static/js/3.74d5cbc4.chunk.js.map",
     "index.html": "/villager-vibes/index.html",
-    "static/css/main.ddd7b19e.chunk.css.map": "/villager-vibes/static/css/main.ddd7b19e.chunk.css.map",
-    "static/js/2.67cd252c.chunk.js.LICENSE.txt": "/villager-vibes/static/js/2.67cd252c.chunk.js.LICENSE.txt"
+    "static/css/main.36da05c3.chunk.css.map": "/villager-vibes/static/css/main.36da05c3.chunk.css.map",
+    "static/js/2.15cebeb4.chunk.js.LICENSE.txt": "/villager-vibes/static/js/2.15cebeb4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7103ae01.js",
-    "static/js/2.67cd252c.chunk.js",
-    "static/css/main.ddd7b19e.chunk.css",
-    "static/js/main.cc5bee6a.chunk.js"
+    "static/js/runtime-main.34eee9cf.js",
+    "static/js/2.15cebeb4.chunk.js",
+    "static/css/main.36da05c3.chunk.css",
+    "static/js/main.01c80e8b.chunk.js"
   ]
 }
