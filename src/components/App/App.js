@@ -4,9 +4,11 @@ import './App.css';
 import fetchVillagers from '../../apiCalls';
 import IconContainer from '../IconContainer/IconContainer';
 import VillagerDetails from '../VillagerDetails/VillagerDetails';
+import Wishlist from '../Wishlist/Wishlist';
 
 const App = () => {
   const [allVillagers, setAllVillagers] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
     fetchVillagers()
@@ -27,8 +29,11 @@ const App = () => {
             return (<h2>That villager does not exist!</h2>)
           }
 
-          return <VillagerDetails data={villager} />
+          return <VillagerDetails data={villager} setWishlist={setWishlist} wishlist={wishlist} />
         }} />
+        <Route path='/wishlist'>
+          <Wishlist wishlist={wishlist} />
+        </Route>
         <Route path='/'>
           <IconContainer allVillagers={allVillagers} />
         </Route>

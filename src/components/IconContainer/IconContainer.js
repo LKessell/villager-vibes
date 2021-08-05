@@ -9,7 +9,6 @@ const IconContainer = ({ allVillagers }) => {
 
   return (
     <section className='icon-container'>
-      <h2>Villager icons will be here</h2>
       {villagers}
     </section>
   );

@@ -1,11 +1,27 @@
 import './VillagerDetails.css';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const VillagerDetails = ({ data }) => {
+const VillagerDetails = ({ data, wishlist, setWishlist }) => {
+  const [currentVillager, setCurrentVillager] = useState({});
+
   const nameStyle = {
     backgroundColor: data['bubble-color'],
     color: data['text-color']
   }
-  
+
+  useEffect(() => {
+    if (data.id !== currentVillager.id) {
+      setCurrentVillager(data)
+    }
+  }, [currentVillager, data]);
+
+  const addToWishlist = () => {
+    if (!wishlist.includes(currentVillager)) {
+      setWishlist([currentVillager, ...wishlist]);
+    }
+  }
+
   return (
     <section className='villager-details'>
       <img src={`https://acnhapi.com/v1/images/villagers/${data.id}`} alt='' className='detail-photo'/>
@@ -32,6 +48,14 @@ const VillagerDetails = ({ data }) => {
           <dd>{data.saying}</dd>
         </div>
       </dl>
+      <div className='details-buttons'>
+        <Link to='/' className='details-back-btn'>
+          Ew, NO!
+        </Link>
+        <Link to='/wishlist' className='add-wishlist-btn' id={data.id} onClick={addToWishlist}>
+          They're my FAVE!
+        </Link>
+      </div>
     </section>
   );
 }
