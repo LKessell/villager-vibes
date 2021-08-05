@@ -1,10 +1,15 @@
 import './VillagerDetails.css';
 
 const VillagerDetails = ({ data }) => {
+  const nameStyle = {
+    backgroundColor: data['bubble-color'],
+    color: data['text-color']
+  }
+  
   return (
     <section className='villager-details'>
-      <img src={`https://acnhapi.com/v1/images/villagers/${data.id}`} alt=''/>
-      <h3 className='details-name'>{data.name['name-USen']}</h3>
+      <img src={`https://acnhapi.com/v1/images/villagers/${data.id}`} alt='' className='detail-photo'/>
+      <h3 className='details-name' style={nameStyle}>{data.name['name-USen']}</h3>
       <dl>
         <div>
           <dt>Species</dt>
