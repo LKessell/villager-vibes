@@ -32,3 +32,25 @@ dd {
 .detail-photo {
   border-radius: 2vw;
 }
+
+.details-back-btn {
+  display: inline-block;
+  background-color: #db4249;
+  color: #ffffff;
+  border-radius: 2vw;
+  padding: 1vw;
+  margin: 1vw;
+  width: 8vw;
+  text-decoration: none;
+}
+
+.add-wishlist-btn {
+  display: inline-block;
+  background-color: #4ed975;
+  color: #ffffff;
+  border-radius: 2vw;
+  padding: 1vw;
+  margin: 1vw;
+  width: 8vw;
+  text-decoration: none;
+}
