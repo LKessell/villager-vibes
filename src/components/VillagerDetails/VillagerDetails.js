@@ -17,7 +17,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   }, [currentVillager, data]);
 
   const addToWishlist = () => {
-    if (!wishlist.includes(currentVillager)) {
+    if (!wishlist.includes(currentVillager) && wishlist.length < 10) {
       setWishlist([currentVillager, ...wishlist]);
     }
   }
