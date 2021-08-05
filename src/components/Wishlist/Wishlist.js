@@ -1,6 +1,6 @@
 import './Wishlist.css';
 
-const Wishlist = () => {
+const Wishlist = ({ wishlist }) => {
   return (
     <section className='wishlist'>
       <h2>I'm a wishlist</h2>
