@@ -1,11 +1,12 @@
 import './VillagerDetails.css';
+import { Link } from 'react-router-dom';
 
-const VillagerDetails = ({ data }) => {
+const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   const nameStyle = {
     backgroundColor: data['bubble-color'],
     color: data['text-color']
   }
-  
+
   return (
     <section className='villager-details'>
       <img src={`https://acnhapi.com/v1/images/villagers/${data.id}`} alt='' className='detail-photo'/>
@@ -32,6 +33,14 @@ const VillagerDetails = ({ data }) => {
           <dd>{data.saying}</dd>
         </div>
       </dl>
+      <div className='details-buttons'>
+        <Link to='/' className='details-back-btn'>
+          Ew, NO!
+        </Link>
+        <Link to='/wishlist' className='add-wishlist-btn' id={data.id}>
+          They're my FAVE!
+        </Link>
+      </div>
     </section>
   );
 }
