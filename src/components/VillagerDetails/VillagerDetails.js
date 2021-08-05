@@ -1,11 +1,20 @@
 import './VillagerDetails.css';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const VillagerDetails = ({ data, wishlist, setWishlist }) => {
+  const [currentVillager, setCurrentVillager] = useState({});
+
   const nameStyle = {
     backgroundColor: data['bubble-color'],
     color: data['text-color']
   }
+
+  useEffect(() => {
+    if (data.id !== currentVillager.id) {
+      setCurrentVillager(data)
+    }
+  }, [currentVillager, data])
 
   return (
     <section className='villager-details'>
