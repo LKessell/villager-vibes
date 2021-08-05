@@ -14,7 +14,13 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
     if (data.id !== currentVillager.id) {
       setCurrentVillager(data)
     }
-  }, [currentVillager, data])
+  }, [currentVillager, data]);
+
+  const addToWishlist = () => {
+    if (!wishlist.includes(currentVillager)) {
+      setWishlist([currentVillager, ...wishlist]);
+    }
+  }
 
   return (
     <section className='villager-details'>
@@ -46,7 +52,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
         <Link to='/' className='details-back-btn'>
           Ew, NO!
         </Link>
-        <Link to='/wishlist' className='add-wishlist-btn' id={data.id}>
+        <Link to='/wishlist' className='add-wishlist-btn' id={data.id} onClick={addToWishlist}>
           They're my FAVE!
         </Link>
       </div>
