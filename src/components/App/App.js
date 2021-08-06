@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import fetchVillagers from '../../apiCalls';
+import NavBar from '../NavBar/NavBar';
 import IconContainer from '../IconContainer/IconContainer';
 import VillagerDetails from '../VillagerDetails/VillagerDetails';
 import Wishlist from '../Wishlist/Wishlist';
@@ -19,6 +20,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <h1>Villager Vibes</h1>
+        <NavBar />
       </header>
       <main>
       <Switch>
