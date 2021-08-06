@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/villager-vibes/static/css/main.b5ca89b4.chunk.css",
-    "main.js": "/villager-vibes/static/js/main.feba31c3.chunk.js",
-    "main.js.map": "/villager-vibes/static/js/main.feba31c3.chunk.js.map",
-    "runtime-main.js": "/villager-vibes/static/js/runtime-main.037b5fa6.js",
-    "runtime-main.js.map": "/villager-vibes/static/js/runtime-main.037b5fa6.js.map",
-    "static/js/2.b3c68b50.chunk.js": "/villager-vibes/static/js/2.b3c68b50.chunk.js",
-    "static/js/2.b3c68b50.chunk.js.map": "/villager-vibes/static/js/2.b3c68b50.chunk.js.map",
-    "static/js/3.2aeedc2e.chunk.js": "/villager-vibes/static/js/3.2aeedc2e.chunk.js",
-    "static/js/3.2aeedc2e.chunk.js.map": "/villager-vibes/static/js/3.2aeedc2e.chunk.js.map",
+    "main.css": "/villager-vibes/static/css/main.5c28962d.chunk.css",
+    "main.js": "/villager-vibes/static/js/main.ce8ab79a.chunk.js",
+    "main.js.map": "/villager-vibes/static/js/main.ce8ab79a.chunk.js.map",
+    "runtime-main.js": "/villager-vibes/static/js/runtime-main.bba92bc3.js",
+    "runtime-main.js.map": "/villager-vibes/static/js/runtime-main.bba92bc3.js.map",
+    "static/js/2.1ec6fc65.chunk.js": "/villager-vibes/static/js/2.1ec6fc65.chunk.js",
+    "static/js/2.1ec6fc65.chunk.js.map": "/villager-vibes/static/js/2.1ec6fc65.chunk.js.map",
+    "static/js/3.8110cb20.chunk.js": "/villager-vibes/static/js/3.8110cb20.chunk.js",
+    "static/js/3.8110cb20.chunk.js.map": "/villager-vibes/static/js/3.8110cb20.chunk.js.map",
     "index.html": "/villager-vibes/index.html",
-    "static/css/main.b5ca89b4.chunk.css.map": "/villager-vibes/static/css/main.b5ca89b4.chunk.css.map",
-    "static/js/2.b3c68b50.chunk.js.LICENSE.txt": "/villager-vibes/static/js/2.b3c68b50.chunk.js.LICENSE.txt"
+    "static/css/main.5c28962d.chunk.css.map": "/villager-vibes/static/css/main.5c28962d.chunk.css.map",
+    "static/js/2.1ec6fc65.chunk.js.LICENSE.txt": "/villager-vibes/static/js/2.1ec6fc65.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.037b5fa6.js",
-    "static/js/2.b3c68b50.chunk.js",
-    "static/css/main.b5ca89b4.chunk.css",
-    "static/js/main.feba31c3.chunk.js"
+    "static/js/runtime-main.bba92bc3.js",
+    "static/js/2.1ec6fc65.chunk.js",
+    "static/css/main.5c28962d.chunk.css",
+    "static/js/main.ce8ab79a.chunk.js"
   ]
 }
