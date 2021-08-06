@@ -1,0 +1,21 @@
+nav {
+  position: absolute;
+  width: 90%;
+  padding: 1vw;
+}
+
+.nav-home {
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-wishlist {
+  float: right;
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  border-bottom: 2px dashed white;
+}
