@@ -33,4 +33,18 @@ describe('Dashboard user flows', () => {
     cy.get('.nav-home').should('have.class', 'active');
     cy.get('.nav-wishlist').should('not.have.class', 'active');
   });
+
+  it('Should contain a list of filters for villager species', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('label').contains('All Villagers');
+    cy.get('#Duck').should('exist');
+    cy.get('label').contains('Duck');
+  });
+
+  it('Should filter displayed villagers when a species bubble is clicked', () => {
+    cy.visit('http://localhost:3000/');
+    cy.contains('Wolf').click();
+    cy.get('#384').should('be.visible');
+    cy.get('#140').should('not.exist');
+  });
 });
