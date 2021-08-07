@@ -3,17 +3,22 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import fetchVillagers from '../../apiCalls';
 import NavBar from '../NavBar/NavBar';
+import Filter from '../Filter/Filter';
 import IconContainer from '../IconContainer/IconContainer';
 import VillagerDetails from '../VillagerDetails/VillagerDetails';
 import Wishlist from '../Wishlist/Wishlist';
 
 const App = () => {
   const [allVillagers, setAllVillagers] = useState([]);
+  const [displayedVillagers, setDisplayedVillagers] = useState([]);
   const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
     fetchVillagers()
-      .then(data => setAllVillagers(data))
+      .then(data => {
+        setAllVillagers(data)
+        setDisplayedVillagers(data)
+      })
   }, []);
 
   return (
@@ -37,7 +42,8 @@ const App = () => {
           <Wishlist wishlist={wishlist} />
         </Route>
         <Route path='/'>
-          <IconContainer allVillagers={allVillagers} />
+          <Filter />
+          <IconContainer villagers={displayedVillagers} />
         </Route>
       </Switch>
       </main>
