@@ -18,6 +18,16 @@ describe('Wishlist user flows', () => {
     cy.get('#384').should('not.exist');
   });
 
+  it('Cannot add duplicate villagers', () => {
+    cy.get('#155').click();
+    cy.get('.add-wishlist-btn').click();
+    cy.get('#155').should('be.visible');
+    cy.get('.nav-home').click();
+    cy.get('#155').click();
+    cy.get('.add-wishlist-btn').click();
+    cy.get('img').should('have.length', 1);
+  });
+
   it('Wishlist nav link is active', () => {
     cy.get('#155').click();
     cy.get('.add-wishlist-btn').click();
