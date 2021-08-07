@@ -2,7 +2,16 @@ import './Filter.css';
 
 const Filter = () => {
   return (
-    <h2>I'm the Filter</h2>
+    <section className='filter-container'>
+      <label>
+        <input type='radio' className='radio-bubble' id='all' checked={true} />
+      All Villagers
+      </label>
+      <label>
+        <input type='radio' className='radio-bubble' id='Bird' checked={false} />
+      Bird
+      </label>
+    </section>
   );
 }
 
