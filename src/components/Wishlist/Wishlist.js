@@ -6,7 +6,7 @@ const Wishlist = ({ wishlist }) => {
   return (
     <section className='wishlist'>
       <h2 className='wishlist-title'>The Top 10 BEST Villagers:</h2>
-      <IconContainer allVillagers={wishlist} />
+      <IconContainer villagers={wishlist} />
     </section>
   );
 }
