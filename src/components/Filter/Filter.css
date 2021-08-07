@@ -6,3 +6,19 @@
   display: inline-block;
   float: inline-start;
 }
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0.5vw;
+  background-color: #5db7b5;
+  color: #ffffff;
+  border-radius: 2vw;
+  padding: 1vw;
+  min-width: 6vw;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
