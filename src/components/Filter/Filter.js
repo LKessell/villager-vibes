@@ -1,6 +1,7 @@
 import './Filter.css';
+import PropTypes from 'prop-types';
 
-const Filter = () => {
+const Filter = ({ displayedVillagers, setDisplayedVillagers }) => {
   return (
     <section className='filter-container'>
       <label>
@@ -16,3 +17,8 @@ const Filter = () => {
 }
 
 export default Filter;
+
+Filter.propTypes = {
+  displayedVillagers: PropTypes.array,
+  setDisplayedVillagers: PropTypes.func
+}
