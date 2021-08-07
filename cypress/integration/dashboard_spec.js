@@ -43,8 +43,20 @@ describe('Dashboard user flows', () => {
 
   it('Should filter displayed villagers when a species bubble is clicked', () => {
     cy.visit('http://localhost:3000/');
+    cy.get('#140').should('be.visible');
     cy.contains('Wolf').click();
     cy.get('#384').should('be.visible');
     cy.get('#140').should('not.exist');
+  });
+
+  it('Can click "All Villagers" filter to show full list of villagers', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('#140').should('be.visible');
+    cy.contains('Wolf').click();
+    cy.get('#384').should('be.visible');
+    cy.get('#140').should('not.exist');
+    cy.contains('All Villagers').click();
+    cy.get('#140').should('be.visible');
+    cy.get('#155').should('be.visible');
   });
 });
