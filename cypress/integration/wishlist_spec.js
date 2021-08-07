@@ -17,4 +17,16 @@ describe('Wishlist user flows', () => {
     cy.get('#140').should('be.visible');
     cy.get('#384').should('not.exist');
   });
+
+  it('Wishlist nav link is active', () => {
+    cy.get('#155').click();
+    cy.get('.add-wishlist-btn').click();
+    cy.get('.nav-wishlist').should('have.class', 'active');
+  });
+
+  it('Wishlist nav link is functional', () => {
+    cy.get('.wishlist-title').should('not.exist');
+    cy.get('.nav-wishlist').click();
+    cy.get('.wishlist-title').should('be.visible');
+  });
 });
