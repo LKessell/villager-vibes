@@ -9,7 +9,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     if (!filters.includes(villager.species)) {
       filters.push(villager.species);
     }
-    return filters;
+    return filters.sort();
   }, []);
 
   const speciesFilters = allFilters.map(filter => {
