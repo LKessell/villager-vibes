@@ -18,4 +18,17 @@ describe('Villager details user flows', () => {
     cy.get('.details-back-btn').should('be.visible');
     cy.get('.add-wishlist-btn').should('be.visible');
   });
+
+  it('Should return to the dashboard after clicking the rejection button', () => {
+    cy.url().should('include', '/villagers/140');
+    cy.get('.details-back-btn').click();
+    cy.url().should('not.include', '/villagers/140');
+  });
+
+  it('Should show an error message if an invalid url is entered', () => {
+    cy.visit('http://localhost:3000/#/villagers/900');
+    cy.contains('That villager does not exist!');
+    cy.visit('http://localhost:3000/#/villagers/Ketchup');
+    cy.contains('That villager does not exist!');
+  });
 });
