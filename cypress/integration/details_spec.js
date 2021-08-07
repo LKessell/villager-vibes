@@ -31,4 +31,10 @@ describe('Villager details user flows', () => {
     cy.visit('http://localhost:3000/#/villagers/Ketchup');
     cy.contains('That villager does not exist!');
   });
+
+  it('Can click the FAVE button to add the current villager to the wishlist and move to the wishlist page', () => {
+    cy.get('.add-wishlist-btn').click();
+    cy.url().should('include', '/wishlist');
+    cy.get('#140').should('be.visible');
+  });
 });
