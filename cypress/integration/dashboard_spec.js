@@ -21,4 +21,16 @@ describe('Dashboard user flows', () => {
     cy.get('#384').should('be.visible');
     cy.get('#140').should('be.visible');
   });
+
+  it('Should have navigation links for the Home and Wishlist pages', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('.nav-home').should('be.visible');
+    cy.get('.nav-wishlist').should('be.visible');
+  });
+
+  it('Navigation link styling should reflect the current page', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('.nav-home').should('have.class', 'active');
+    cy.get('.nav-wishlist').should('not.have.class', 'active');
+  });
 });
