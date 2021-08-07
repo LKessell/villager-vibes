@@ -1,6 +1,7 @@
 import './VillagerDetails.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   const [currentVillager, setCurrentVillager] = useState({});
@@ -61,3 +62,9 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
 }
 
 export default VillagerDetails;
+
+VillagerDetails.propTypes = {
+  data: PropTypes.array,
+  wishlist: PropTypes.array,
+  setWishlist: PropTypes.func
+}

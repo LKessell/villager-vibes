@@ -1,4 +1,5 @@
 import './IconContainer.css';
+import PropTypes from 'prop-types';
 import VillagerIcon from '../VillagerIcon/VillagerIcon';
 
 const IconContainer = ({ allVillagers }) => {
@@ -15,3 +16,7 @@ const IconContainer = ({ allVillagers }) => {
 }
 
 export default IconContainer;
+
+IconContainer.propTypes = {
+  allVillagers: PropTypes.array
+};

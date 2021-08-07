@@ -1,5 +1,6 @@
 import './VillagerIcon.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const VillagerIcon = ({ id, img, altText }) => {
   return (
@@ -10,3 +11,9 @@ const VillagerIcon = ({ id, img, altText }) => {
 }
 
 export default VillagerIcon;
+
+VillagerIcon.propTypes = {
+  id: PropTypes.number,
+  img: PropTypes.string,
+  altText: PropTypes.string
+}
