@@ -59,4 +59,22 @@ describe('Dashboard user flows', () => {
     cy.get('#140').should('be.visible');
     cy.get('#155').should('be.visible');
   });
+
+  it('Can click a villager icon to move to the details page', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('#140').click();
+    cy.url().should('include', '/villagers/140');
+  });
+
+  it('Can navigate to the dashboard using the Home link or browser back button', () => {
+    cy.visit('http://localhost:3000/');
+    cy.get('#140').click();
+    cy.url().should('include', '/villagers/140');
+    cy.get('.nav-home').click();
+    cy.url().should('not.include', '/villagers/140');
+    cy.get('#140').click();
+    cy.url().should('include', '/villagers/140');
+    cy.go('back');
+    cy.url().should('not.include', '/villagers/140');
+  });
 });
