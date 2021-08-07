@@ -1,5 +1,6 @@
 import './Wishlist.css';
 import IconContainer from '../IconContainer/IconContainer';
+import PropTypes from 'prop-types';
 
 const Wishlist = ({ wishlist }) => {
   return (
@@ -11,3 +12,7 @@ const Wishlist = ({ wishlist }) => {
 }
 
 export default Wishlist;
+
+Wishlist.propTypes = {
+  wishlist: PropTypes.array
+}
