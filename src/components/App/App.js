@@ -42,7 +42,7 @@ const App = () => {
           <Wishlist wishlist={wishlist} />
         </Route>
         <Route path='/'>
-          <Filter displayedVillagers={displayedVillagers} setDisplayedVillagers={setDisplayedVillagers} />
+          <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
           <IconContainer villagers={displayedVillagers} />
         </Route>
       </Switch>
