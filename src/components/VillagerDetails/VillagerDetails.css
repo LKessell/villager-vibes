@@ -20,6 +20,7 @@ dd {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.7vw;
 }
 
 .details-name {
@@ -38,9 +39,8 @@ dd {
   background-color: #db4249;
   color: #ffffff;
   border-radius: 2vw;
-  padding: 1vw;
+  padding: 1vw 3vw;
   margin: 1vw;
-  width: 8vw;
   text-decoration: none;
 }
 
@@ -49,8 +49,7 @@ dd {
   background-color: #4ed975;
   color: #ffffff;
   border-radius: 2vw;
-  padding: 1vw;
+  padding: 1vw 3vw;
   margin: 1vw;
-  width: 8vw;
   text-decoration: none;
 }

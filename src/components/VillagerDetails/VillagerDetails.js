@@ -64,7 +64,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
 export default VillagerDetails;
 
 VillagerDetails.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.object,
   wishlist: PropTypes.array,
   setWishlist: PropTypes.func
 }
