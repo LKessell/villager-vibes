@@ -43,7 +43,7 @@ const App = () => {
         </Route>
         <Route path='/'>
           <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
-          <IconContainer villagers={displayedVillagers} />
+          <IconContainer type='main' villagers={displayedVillagers} />
         </Route>
       </Switch>
       </main>
