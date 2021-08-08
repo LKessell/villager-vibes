@@ -7,6 +7,7 @@ import Filter from '../Filter/Filter';
 import IconContainer from '../IconContainer/IconContainer';
 import VillagerDetails from '../VillagerDetails/VillagerDetails';
 import Wishlist from '../Wishlist/Wishlist';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const App = () => {
   const [allVillagers, setAllVillagers] = useState([]);
@@ -24,6 +25,13 @@ const App = () => {
         setErrorMsg('We are experiencing server issues, please try again later!');
       })
   }, []);
+
+  const mainError = errorMsg && <ErrorMessage message={errorMsg} />;
+  
+  const mainSuccess = !errorMsg && <>
+    <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
+    <IconContainer type='main' villagers={displayedVillagers} />
+  </>;
 
   return (
     <div className="App">
@@ -46,8 +54,8 @@ const App = () => {
           <Wishlist wishlist={wishlist} />
         </Route>
         <Route path='/'>
-          <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
-          <IconContainer type='main' villagers={displayedVillagers} />
+          {mainError}
+          {mainSuccess}
         </Route>
       </Switch>
       </main>
