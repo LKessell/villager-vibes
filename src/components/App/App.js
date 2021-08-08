@@ -27,7 +27,7 @@ const App = () => {
   }, []);
 
   const mainError = errorMsg && <ErrorMessage message={errorMsg} />;
-  
+
   const mainSuccess = !errorMsg && <>
     <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
     <IconContainer type='main' villagers={displayedVillagers} />
@@ -45,7 +45,7 @@ const App = () => {
           const villager = allVillagers.find(villager => villager.id === parseInt(match.params.id));
 
           if (!villager) {
-            return (<h2>That villager does not exist!</h2>)
+            return <ErrorMessage message='That villager does not exist!' />
           }
 
           return <VillagerDetails data={villager} setWishlist={setWishlist} wishlist={wishlist} />
