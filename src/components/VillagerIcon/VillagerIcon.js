@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import circleX from '../../remove.png';
 
-const VillagerIcon = ({ id, img, altText, type, setWishlist }) => {
+const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
   const removeBtn = type === 'wishlist' && <img src={circleX} alt='remove' className='remove-btn' id={`rem-${id}`} onClick={(event) => removeVillager(event.target.id)}/>
 
   const removeVillager = (id) => {
     const splitID = id.split('-');
-    console.log(splitID);
+    const numID = parseInt(splitID[1]);
+    const newWishlist = villagers.filter(villager => villager.id !== numID);
+    setWishlist(newWishlist);
   };
 
   return (
@@ -28,5 +30,6 @@ VillagerIcon.propTypes = {
   img: PropTypes.string,
   altText: PropTypes.string,
   type: PropTypes.string,
-  setWishlist: PropTypes.func
+  setWishlist: PropTypes.func,
+  villagers: PropTypes.array
 }
