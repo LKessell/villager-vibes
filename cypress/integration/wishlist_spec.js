@@ -30,7 +30,7 @@ describe('Wishlist user flows', () => {
     cy.get('.nav-home').click();
     cy.get('#155').click();
     cy.get('.add-wishlist-btn').click();
-    cy.get('img').should('have.length', 1);
+    cy.get('img').should('have.length', 2);
   });
 
   it('Wishlist nav link is active', () => {
@@ -43,5 +43,22 @@ describe('Wishlist user flows', () => {
     cy.get('.wishlist-title').should('not.exist');
     cy.get('.nav-wishlist').click();
     cy.get('.wishlist-title').should('be.visible');
+  });
+
+  it('Should have a remove button for villagers on the wishlist', () => {
+    cy.get('#140').click();
+    cy.get('.add-wishlist-btn').click();
+    cy.get('#rem-140').should('be.visible');
+  });
+
+  it('Can remove a villager from the wishlist by clicking the remove button', () => {
+    cy.get('#155').click();
+    cy.get('.add-wishlist-btn').click();
+    cy.get('.nav-home').click();
+    cy.get('#140').click();
+    cy.get('.add-wishlist-btn').click();
+    cy.get('#155').should('be.visible');
+    cy.get('#rem-155').click();
+    cy.get('#155').should('not.exist');
   });
 });
