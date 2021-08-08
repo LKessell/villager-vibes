@@ -15,7 +15,23 @@ describe('Dashboard user flows', () => {
     cy.visit('http://localhost:3000/').contains('Villager Vibes');
   });
 
+  it('Should show a loading message while data is loading', () => {
+    let sendResponse;
+    const trigger = new Promise(resolve => {
+      sendResponse = resolve;
+    });
+    cy.fixture('sampleVillagers').then((villagersData) => {
+      cy.intercept('https://acnhapi.com/v1a/villagers/', (request) => {
+        return trigger.then(() => {
+          request.reply(villagersData);
+        });
+      });
+    });
+    cy.visit('http://localhost:3000/').contains('Loading villagers...');
+  });
+
   it('Should show a list of villager icons on the dashboard', () => {
+    cy.wait(1000);
     cy.visit('http://localhost:3000/');
     cy.get('#155').should('be.visible');
     cy.get('#384').should('be.visible');

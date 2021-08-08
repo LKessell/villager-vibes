@@ -1,8 +1,9 @@
 .icon-container {
   background-color: #eee6a5;
   border-radius: 4vw;
-  max-width: 50vw;
+  width: 50vw;
   padding: 2vw;
   margin: auto;
   display: inline-block;
+  color: #856e5e;
 }
