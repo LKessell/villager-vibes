@@ -13,6 +13,7 @@ const IconContainer = ({ type, villagers, setWishlist }) => {
         altText={villager.name['name-USen']}
         type={type}
         setWishlist={setWishlist}
+        villagers={villagers}
       />
     );
   });
