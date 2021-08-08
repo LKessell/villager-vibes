@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/villager-vibes/static/css/main.eddd5247.chunk.css",
-    "main.js": "/villager-vibes/static/js/main.43b46ac8.chunk.js",
-    "main.js.map": "/villager-vibes/static/js/main.43b46ac8.chunk.js.map",
+    "main.js": "/villager-vibes/static/js/main.aee37746.chunk.js",
+    "main.js.map": "/villager-vibes/static/js/main.aee37746.chunk.js.map",
     "runtime-main.js": "/villager-vibes/static/js/runtime-main.d246f11e.js",
     "runtime-main.js.map": "/villager-vibes/static/js/runtime-main.d246f11e.js.map",
     "static/js/2.01fb75be.chunk.js": "/villager-vibes/static/js/2.01fb75be.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d246f11e.js",
     "static/js/2.01fb75be.chunk.js",
     "static/css/main.eddd5247.chunk.css",
-    "static/js/main.43b46ac8.chunk.js"
+    "static/js/main.aee37746.chunk.js"
   ]
 }
