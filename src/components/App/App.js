@@ -12,12 +12,16 @@ const App = () => {
   const [allVillagers, setAllVillagers] = useState([]);
   const [displayedVillagers, setDisplayedVillagers] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     fetchVillagers()
       .then(data => {
-        setAllVillagers(data)
-        setDisplayedVillagers(data)
+        setAllVillagers(data);
+        setDisplayedVillagers(data);
+      })
+      .catch(error => {
+        setErrorMsg('We are experiencing server issues, please try again later!');
       })
   }, []);
 
