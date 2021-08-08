@@ -7,19 +7,31 @@ import Filter from '../Filter/Filter';
 import IconContainer from '../IconContainer/IconContainer';
 import VillagerDetails from '../VillagerDetails/VillagerDetails';
 import Wishlist from '../Wishlist/Wishlist';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const App = () => {
   const [allVillagers, setAllVillagers] = useState([]);
   const [displayedVillagers, setDisplayedVillagers] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     fetchVillagers()
       .then(data => {
-        setAllVillagers(data)
-        setDisplayedVillagers(data)
+        setAllVillagers(data);
+        setDisplayedVillagers(data);
+      })
+      .catch(error => {
+        setErrorMsg('We are experiencing server issues, please try again later!');
       })
   }, []);
+
+  const mainError = errorMsg && <ErrorMessage message={errorMsg} />;
+
+  const mainSuccess = !errorMsg && <>
+    <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
+    <IconContainer type='main' villagers={displayedVillagers} />
+  </>;
 
   return (
     <div className="App">
@@ -33,7 +45,7 @@ const App = () => {
           const villager = allVillagers.find(villager => villager.id === parseInt(match.params.id));
 
           if (!villager) {
-            return (<h2>That villager does not exist!</h2>)
+            return <ErrorMessage message='That villager does not exist!' />
           }
 
           return <VillagerDetails data={villager} setWishlist={setWishlist} wishlist={wishlist} />
@@ -42,8 +54,8 @@ const App = () => {
           <Wishlist wishlist={wishlist} />
         </Route>
         <Route path='/'>
-          <Filter setDisplayedVillagers={setDisplayedVillagers} allVillagers={allVillagers} />
-          <IconContainer type='main' villagers={displayedVillagers} />
+          {mainError}
+          {mainSuccess}
         </Route>
       </Switch>
       </main>
