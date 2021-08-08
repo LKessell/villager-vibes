@@ -32,6 +32,7 @@ dd {
 
 .detail-photo {
   border-radius: 2vw;
+  max-width: 25vw;
 }
 
 .details-back-btn {
