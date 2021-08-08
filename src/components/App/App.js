@@ -51,7 +51,7 @@ const App = () => {
           return <VillagerDetails data={villager} setWishlist={setWishlist} wishlist={wishlist} />
         }} />
         <Route path='/wishlist'>
-          <Wishlist wishlist={wishlist} />
+          <Wishlist wishlist={wishlist} setWishlist={setWishlist} />
         </Route>
         <Route exact path='/'>
           {mainError}
