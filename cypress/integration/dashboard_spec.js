@@ -93,4 +93,10 @@ describe('Dashboard user flows', () => {
     cy.go('back');
     cy.url().should('not.include', '/villagers/140');
   });
+
+  it('Should show an error message if there is a problem with the server', () => {
+    cy.intercept('https://acnhapi.com/v1a/villagers/', { statusCode: 500 });
+    cy.visit('http://localhost:3000/');
+    cy.contains('We are experiencing server issues, please try again later!');
+  });
 });
