@@ -53,9 +53,12 @@ const App = () => {
         <Route path='/wishlist'>
           <Wishlist wishlist={wishlist} />
         </Route>
-        <Route path='/'>
+        <Route exact path='/'>
           {mainError}
           {mainSuccess}
+        </Route>
+        <Route>
+          <ErrorMessage message='That villager does not exist!' />
         </Route>
       </Switch>
       </main>
