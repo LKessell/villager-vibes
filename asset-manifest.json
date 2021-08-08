@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/villager-vibes/static/css/main.a49997c2.chunk.css",
-    "main.js": "/villager-vibes/static/js/main.478c30c2.chunk.js",
-    "main.js.map": "/villager-vibes/static/js/main.478c30c2.chunk.js.map",
+    "main.css": "/villager-vibes/static/css/main.eddd5247.chunk.css",
+    "main.js": "/villager-vibes/static/js/main.43b46ac8.chunk.js",
+    "main.js.map": "/villager-vibes/static/js/main.43b46ac8.chunk.js.map",
     "runtime-main.js": "/villager-vibes/static/js/runtime-main.d246f11e.js",
     "runtime-main.js.map": "/villager-vibes/static/js/runtime-main.d246f11e.js.map",
     "static/js/2.01fb75be.chunk.js": "/villager-vibes/static/js/2.01fb75be.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.6cacdebf.chunk.js": "/villager-vibes/static/js/3.6cacdebf.chunk.js",
     "static/js/3.6cacdebf.chunk.js.map": "/villager-vibes/static/js/3.6cacdebf.chunk.js.map",
     "index.html": "/villager-vibes/index.html",
-    "static/css/main.a49997c2.chunk.css.map": "/villager-vibes/static/css/main.a49997c2.chunk.css.map",
+    "static/css/main.eddd5247.chunk.css.map": "/villager-vibes/static/css/main.eddd5247.chunk.css.map",
     "static/js/2.01fb75be.chunk.js.LICENSE.txt": "/villager-vibes/static/js/2.01fb75be.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d246f11e.js",
     "static/js/2.01fb75be.chunk.js",
-    "static/css/main.a49997c2.chunk.css",
-    "static/js/main.478c30c2.chunk.js"
+    "static/css/main.eddd5247.chunk.css",
+    "static/js/main.43b46ac8.chunk.js"
   ]
 }
