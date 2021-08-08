@@ -6,6 +6,11 @@ describe('Wishlist user flows', () => {
     cy.visit('http://localhost:3000/');
   });
 
+  it('Should show a message if the wishlist is empty', () => {
+    cy.get('.nav-wishlist').click();
+    cy.contains('You haven\'t added any villagers yet!');
+  });
+
   it('Should be able to add multiple villagers to the wishlist', () => {
     cy.get('#155').click();
     cy.get('.add-wishlist-btn').click();
