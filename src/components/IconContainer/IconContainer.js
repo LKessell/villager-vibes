@@ -23,7 +23,7 @@ const IconContainer = ({ type, villagers, setWishlist }) => {
   const wishlistMsg = !villagers.length && type === 'wishlist' && <h2>You haven't added any villagers yet!</h2>;
 
   return (
-    <section className='icon-container'>
+    <section className='icon-container box'>
       {loadingMsg}
       {wishlistMsg}
       {currentVillagers}
