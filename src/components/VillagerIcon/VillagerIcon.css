@@ -1,8 +1,14 @@
 .remove-btn {
   height: 2vw;
   position: relative;
-  right: 3.5vw;
+  right: 2.5vw;
   bottom: 1vw;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
 }
 
 .villager-icon {
