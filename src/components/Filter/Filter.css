@@ -1,10 +1,15 @@
 .filter-container {
   background-color: #eee6a5;
+  color: #856e5e;
   border-radius: 4vw;
   max-width: 30vw;
   padding: 2vw;
   display: inline-block;
   float: inline-start;
+}
+
+.filter-title {
+  margin-bottom: 1vw;
 }
 
 input {
@@ -14,11 +19,17 @@ input {
 label {
   display: inline-block;
   margin: 0.5vw;
+  border: 2px solid #5db7b5;
   background-color: #5db7b5;
   color: #ffffff;
   border-radius: 2vw;
-  padding: 1vw;
+  padding: 0.8vw;
   min-width: 4vw;
   font-size: 1.2vw;
   cursor: pointer;
+  transition: border 0.2s;
+}
+
+label:hover {
+  border: 2px solid white;
 }
