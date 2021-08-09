@@ -13,6 +13,7 @@
 
 .villager-icon {
   transition: transform 0.2s;
+  width: 8vw;
 }
 
 .villager-icon:hover {
