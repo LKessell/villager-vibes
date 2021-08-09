@@ -10,3 +10,10 @@
   padding: 2vw;
   color: #856e5e;
 }
+
+@media screen and (max-width: 680px) {
+  .box {
+    width: 80vw;
+    display: block;
+  }
+}

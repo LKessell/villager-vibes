@@ -30,3 +30,14 @@ label {
 label:hover {
   border: 2px solid white;
 }
+
+@media screen and (max-width: 680px) {
+  .filter-container {
+    display: block;
+    float: none;
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 3vw;
+    font-size: 3.5vw;
+  }
+}
