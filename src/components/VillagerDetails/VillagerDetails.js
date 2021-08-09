@@ -24,7 +24,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   }
 
   return (
-    <section className='villager-details'>
+    <section className='villager-details box'>
       <img src={`https://acnhapi.com/v1/images/villagers/${data.id}`} alt='' className='detail-photo'/>
       <h3 className='details-name' style={nameStyle}>{data.name['name-USen']}</h3>
       <dl>
