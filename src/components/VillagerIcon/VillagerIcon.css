@@ -19,3 +19,9 @@
 .villager-icon:hover {
   transform: translateY(-2px);
 }
+
+@media screen and (max-width: 680px) {
+  .villager-icon {
+    width: 15vw;
+  }
+}
