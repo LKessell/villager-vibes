@@ -1,5 +1,5 @@
 .icon-container {
-  width: 50vw;
+  max-width: 50vw;
   margin: auto;
   display: inline-block;
 }
@@ -12,8 +12,9 @@
 }
 
 @media screen and (max-width: 680px) {
-  .box {
-    width: 80vw;
+  .icon-container {
+    max-width: 80vw;
     display: block;
+    font-size: 3vw;
   }
 }
