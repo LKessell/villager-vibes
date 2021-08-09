@@ -19,3 +19,9 @@
 main {
   padding: 2vw;
 }
+
+@media screen and (max-width: 680px) {
+  .App-header {
+    padding-top: 4vw;
+  }
+}
