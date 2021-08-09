@@ -13,8 +13,21 @@
 
 .villager-icon {
   transition: transform 0.2s;
+  width: 8vw;
 }
 
 .villager-icon:hover {
   transform: translateY(-2px);
+}
+
+@media screen and (max-width: 680px) {
+  .villager-icon {
+    width: 18vw;
+  }
+
+  .remove-btn {
+    height: 4vw;
+    right: 4vw;
+    bottom: 0;
+  }
 }

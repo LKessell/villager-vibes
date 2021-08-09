@@ -45,7 +45,7 @@ const App = () => {
           const villager = allVillagers.find(villager => villager.id === parseInt(match.params.id));
 
           if (!villager) {
-            return <ErrorMessage message='That villager does not exist!' />
+            return <ErrorMessage message='Sorry, this page does not exist!' />
           }
 
           return <VillagerDetails data={villager} setWishlist={setWishlist} wishlist={wishlist} />
@@ -58,7 +58,7 @@ const App = () => {
           {mainSuccess}
         </Route>
         <Route>
-          <ErrorMessage message='That villager does not exist!' />
+          <ErrorMessage message='Sorry, this page does not exist!' />
         </Route>
       </Switch>
       </main>

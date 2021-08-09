@@ -1,10 +1,6 @@
 .filter-container {
-  background-color: #eee6a5;
-  color: #856e5e;
-  border-radius: 4vw;
   max-width: 30vw;
   margin-left: 1.5vw;
-  padding: 2vw;
   display: inline-block;
   float: inline-start;
 }
@@ -33,4 +29,20 @@ label {
 
 label:hover {
   border: 2px solid white;
+}
+
+@media screen and (max-width: 680px) {
+  .filter-container {
+    display: block;
+    float: none;
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 3vw;
+    font-size: 3.5vw;
+  }
+
+  label {
+    font-size: 3vw;
+    padding: 0.8vw 2.2vw;
+  }
 }

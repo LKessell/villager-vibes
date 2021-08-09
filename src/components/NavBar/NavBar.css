@@ -21,3 +21,9 @@ nav {
   border-bottom: 2px dashed white;
   pointer-events: none;
 }
+
+@media screen and (max-width: 680px) {
+  nav {
+    font-size: 4.5vw;
+  }
+}

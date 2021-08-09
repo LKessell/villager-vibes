@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ErrorMessage = ({ message }) => {
   return (
-    <section className='error-container'>
+    <section className='error-container box'>
       <h2>{message}</h2>
     </section>
   );

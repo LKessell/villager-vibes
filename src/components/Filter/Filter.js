@@ -35,7 +35,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   }
 
   return (
-    <section className='filter-container'>
+    <section className='filter-container box'>
       <h2 className='filter-title'>I'm vibing with...</h2>
       <label>
         <input

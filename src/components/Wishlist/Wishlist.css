@@ -1,8 +1,5 @@
 .wishlist {
-  background-color: #eee6a5;
-  border-radius: 4vw;
   max-width: 60vw;
-  padding: 2vw;
   margin: auto;
 }
 
@@ -13,4 +10,18 @@
   width: 20vw;
   padding: 1vw;
   margin: auto;
+}
+
+@media screen and (max-width: 680px) {
+  .wishlist {
+    max-width: 80vw;
+    padding: 3vw;
+  }
+
+  .wishlist-title {
+    border-radius: 2vw;
+    padding: 1vw;
+    margin: auto;
+    width: 70vw;
+  }
 }
