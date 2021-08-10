@@ -1,4 +1,6 @@
-# 🏝 Villager Vibes 🏝
+<h1 align="center">🏝 Villager Vibes 🏝</h1>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77205456/128792545-373fb7ba-4635-4e38-b41b-ec899a1d44b9.gif"></p>
 
 ## Project Overview
 
