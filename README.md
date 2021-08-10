@@ -19,6 +19,7 @@ Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wi
 <p>
   <img height="500" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/128792908-8980f443-2cc4-453a-b1fe-3716be2c24c8.png">
   <img height="500" alt="Tablet wishlist" src="https://user-images.githubusercontent.com/77205456/128793004-996f16d5-9a74-45b1-805f-49f5cdb65393.png">
+  <img height="500" alt="Mobile villager details" src="https://user-images.githubusercontent.com/77205456/128794910-1344f009-1428-4930-a146-d879b0976ddf.png">
 </p>
 
 ## Learning Goals
