@@ -47,3 +47,8 @@ I also created some custom background images, which was a fun artistic experimen
 - Save wishlist data in localStorage so it will persist on page refresh
 - Allow users to reorder villagers while viewing the wishlist
 - Allow users to create multiple wishlists
+
+## Credits
+Inspired by Animal Crossing: New Horizons and [this island name generator](https://acnh-namegen.herokuapp.com/)  
+Villager data and images from the [ACNH API](https://acnhapi.com/)  
+Other icons from Freepik on [flaticon.com](https://www.flaticon.com/)
