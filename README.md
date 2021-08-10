@@ -16,6 +16,11 @@ Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wi
 
 ## View the deployed app [Here on GitHub Pages](https://lkessell.github.io/villager-vibes)!
 
+<p>
+  <img height="500" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/128792908-8980f443-2cc4-453a-b1fe-3716be2c24c8.png">
+  <img height="500" alt="Tablet wishlist" src="https://user-images.githubusercontent.com/77205456/128793004-996f16d5-9a74-45b1-805f-49f5cdb65393.png">
+</p>
+
 ## Learning Goals
 - Create a React app with a consistent, modular file strucure
 - Effectively implement hooks to pass data between components
