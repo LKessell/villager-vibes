@@ -38,6 +38,10 @@ In the new Terminal window, run the following commands:
 
 Open your web browser of choice, then visit `localhost:3000` to view the app!
 
+## Project Reflections
+I wanted to keep the interface simple for this app, and mimic some of the menu styles in-game. Despite the simplicity of the app overall, managing the data for the wishlist proved to be a little tricky. After exploring the Context API in my previous project, I think it could be useful to simplify some of the props being passed. I'd like to explore this option in a future iteration!  
+I also created some custom background images, which was a fun artistic experiment. There's a lot of room for future growth in this project, and I plan to continue making improvements.
+
 ## Future Additions
 - Add a warning message when a user tries to add a villager and their wishlist is full
 - Save wishlist data in localStorage so it will persist on page refresh
