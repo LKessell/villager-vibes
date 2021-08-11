@@ -14,12 +14,12 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
   };
 
   return (
-    <>
-    <Link to={`/villagers/${id}`}>
-      <img src={img} id={id} alt={altText} className='villager-icon' />
-    </Link>
-    {removeBtn}
-    </>
+    <article className='icon-wrapper'>
+      <Link to={`/villagers/${id}`}>
+        <img src={img} id={id} alt={altText} className='villager-icon' />
+      </Link>
+      {removeBtn}
+    </article>
   );
 }
 
