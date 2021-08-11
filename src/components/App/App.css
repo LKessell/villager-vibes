@@ -18,10 +18,18 @@
 
 main {
   padding: 2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 680px) {
   .App-header {
     padding-top: 4vw;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
   }
 }
