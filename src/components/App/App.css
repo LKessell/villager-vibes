@@ -27,4 +27,9 @@ main {
   .App-header {
     padding-top: 4vw;
   }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 }
