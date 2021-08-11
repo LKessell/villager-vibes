@@ -1,8 +1,6 @@
 .filter-container {
   max-width: 30vw;
-  margin-left: 1.5vw;
-  display: inline-block;
-  float: inline-start;
+  height: auto;
 }
 
 .filter-title {
