@@ -9,6 +9,7 @@
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+  [![LKessell](https://circleci.com/gh/LKessell/villager-vibes.svg?style=svg)](https://app.circleci.com/pipelines/github/LKessell/villager-vibes)
   
 Villager Vibes is my final solo project completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we have learned throughout the module for React, Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
 
