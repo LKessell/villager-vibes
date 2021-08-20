@@ -5,8 +5,12 @@ orbs:
   node: circleci/node@4.1
 
 workflows:
-  sample:
+  test-and-deploy:
     jobs:
       - cypress/run:
-          start: npm start
-          wait-on: 'http://localhost:3000'
+        start: npm start
+        wait-on: 'http://localhost:3000'
+      - node/run:
+        npm-run: deploy
+        requires:
+          - cypress/run
