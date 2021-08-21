@@ -11,5 +11,5 @@ workflows:
         start: npm start
         wait-on: 'http://localhost:3000'
       - heroku/deploy-via-git:
-        requires:
-          - cypress/run
+          requires:
+            - cypress/run
