@@ -15,7 +15,7 @@ Villager Vibes is my final solo project completed during Mod 3 at the Turing Sch
 
 Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wishlist of their favorite villagers. On the dashboard, users can view a list of all villagers, or filter them by species. Users can click a villager to view more of their details, then add them to the wishlist if they choose. Villagers can also be removed from the wishlist by clicking a red icon.
 
-## View the deployed app [Here on GitHub Pages](https://lkessell.github.io/villager-vibes)!
+## View the deployed app [Here on Heroku](https://villager-vibes.herokuapp.com/#/)!
 
 <p>
   <img height="400" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/128792908-8980f443-2cc4-453a-b1fe-3716be2c24c8.png">
