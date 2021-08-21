@@ -8,8 +8,8 @@ workflows:
   test-and-deploy:
     jobs:
       - cypress/run:
-        start: npm start
-        wait-on: 'http://localhost:3000'
+          start: npm start
+          wait-on: 'http://localhost:3000'
       - heroku/deploy-via-git:
           requires:
             - cypress/run
