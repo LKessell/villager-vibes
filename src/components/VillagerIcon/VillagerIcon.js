@@ -1,7 +1,7 @@
 import './VillagerIcon.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import circleX from '../../remove.png';
+import circleX from '../../assets/remove.png';
 
 const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
   const removeBtn = type === 'wishlist' && <img src={circleX} alt='remove' className='remove-btn' id={`rem-${id}`} onClick={(event) => removeVillager(event.target.id)}/>
