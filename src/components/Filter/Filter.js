@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Filter.css';
 import PropTypes from 'prop-types';
 
@@ -20,19 +20,17 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
           className='radio-bubble'
           id={`${filter}`}
           checked={selectedFilter === filter}
-          onChange={event => filterVillagers(event)}
+          onChange={event => setSelectedFilter(event.target.id)}
         />
         {`${filter}`}
       </label>
     );
-  })
-
-  const filterVillagers = event => {
-    const filteredResults = allVillagers.filter(villager => villager.species === event.target.id || event.target.id === 'all');
-
-    setSelectedFilter(event.target.id);
+  });
+  
+  useEffect(() => {
+    const filteredResults = allVillagers.filter(villager => villager.species === selectedFilter || selectedFilter === 'all');
     setDisplayedVillagers(filteredResults);
-  }
+  }, [allVillagers, selectedFilter, setDisplayedVillagers]);
 
   return (
     <section className='filter-container box'>
@@ -43,7 +41,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
           className='radio-bubble'
           id='all'
           checked={selectedFilter === 'all'}
-          onChange={event => filterVillagers(event)}
+          onChange={event => setSelectedFilter(event.target.id)}
         />
       All Villagers
       </label>
