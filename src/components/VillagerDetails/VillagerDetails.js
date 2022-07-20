@@ -62,8 +62,9 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
           Ew, NO!
         </Link>
         <Link
+          aria-disabled={isWishlistFull}
           to="/wishlist"
-          className="add-wishlist-btn"
+          className={`add-wishlist-btn ${isWishlistFull ? "add-disabled" : ""}`}
           id={data.id}
           onClick={addToWishlist}
         >
