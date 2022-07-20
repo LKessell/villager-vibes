@@ -1,5 +1,10 @@
 .remove-btn {
+  border: none;
+  border-radius: 50%;
+  background: url("../../assets/remove.png");
+  background-size: contain;
   height: 2vw;
+  width: 2vw;
   position: relative;
   right: 2.5vw;
   bottom: 1vw;
@@ -27,6 +32,7 @@
 
   .remove-btn {
     height: 4vw;
+    width: 4vw;
     right: 4vw;
     bottom: 0;
   }
