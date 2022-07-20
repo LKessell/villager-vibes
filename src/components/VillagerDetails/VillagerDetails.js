@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   const [currentVillager, setCurrentVillager] = useState({});
   const pronoun = data.gender === "Female" ? "She" : "He";
+  const isWishlistFull = wishlist.length >= 10;
 
   const nameStyle = {
     backgroundColor: data["bubble-color"],
@@ -69,6 +70,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
           {`${pronoun}'s my FAVE!`}
         </Link>
       </div>
+      {isWishlistFull && <p>Your wishlist is full!</p>}
     </section>
   );
 };
