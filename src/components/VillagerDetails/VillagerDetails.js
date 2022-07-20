@@ -1,19 +1,20 @@
-import './VillagerDetails.css';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import "./VillagerDetails.css";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   const [currentVillager, setCurrentVillager] = useState({});
+  const pronoun = data.gender === "Female" ? "She" : "He";
 
   const nameStyle = {
-    backgroundColor: data['bubble-color'],
-    color: data['text-color']
-  }
+    backgroundColor: data["bubble-color"],
+    color: data["text-color"],
+  };
 
   useEffect(() => {
     if (data.id !== currentVillager.id) {
-      setCurrentVillager(data)
+      setCurrentVillager(data);
     }
   }, [currentVillager, data]);
 
@@ -21,12 +22,18 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
     if (!wishlist.includes(currentVillager) && wishlist.length < 10) {
       setWishlist([currentVillager, ...wishlist]);
     }
-  }
+  };
 
   return (
-    <section className='villager-details box'>
-      <img src={`https://acnhapi.com/v1/images/villagers/${data.id}`} alt='' className='detail-photo'/>
-      <h3 className='details-name' style={nameStyle}>{data.name['name-USen']}</h3>
+    <section className="villager-details box">
+      <img
+        src={`https://acnhapi.com/v1/images/villagers/${data.id}`}
+        alt=""
+        className="detail-photo"
+      />
+      <h3 className="details-name" style={nameStyle}>
+        {data.name["name-USen"]}
+      </h3>
       <dl>
         <div>
           <dt>Species</dt>
@@ -34,7 +41,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
         </div>
         <div>
           <dt>Birthday</dt>
-          <dd>{data['birthday-string']}</dd>
+          <dd>{data["birthday-string"]}</dd>
         </div>
         <div>
           <dt>Gender</dt>
@@ -49,22 +56,27 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
           <dd>{data.saying}</dd>
         </div>
       </dl>
-      <div className='details-buttons'>
-        <Link to='/' className='details-back-btn'>
+      <div className="details-buttons">
+        <Link to="/" className="details-back-btn">
           Ew, NO!
         </Link>
-        <Link to='/wishlist' className='add-wishlist-btn' id={data.id} onClick={addToWishlist}>
-          They're my FAVE!
+        <Link
+          to="/wishlist"
+          className="add-wishlist-btn"
+          id={data.id}
+          onClick={addToWishlist}
+        >
+          {`${pronoun}'s my FAVE!`}
         </Link>
       </div>
     </section>
   );
-}
+};
 
 export default VillagerDetails;
 
 VillagerDetails.propTypes = {
   data: PropTypes.object,
   wishlist: PropTypes.array,
-  setWishlist: PropTypes.func
-}
+  setWishlist: PropTypes.func,
+};
