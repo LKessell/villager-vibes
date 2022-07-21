@@ -1,3 +1,7 @@
+.icon-link {
+  position: relative;
+}
+
 .icon-link .remove-btn {
   visibility: hidden;
   border: none;
@@ -6,9 +10,9 @@
   background-size: contain;
   height: 2vw;
   width: 2vw;
-  position: relative;
-  right: 2.5vw;
-  bottom: 1vw;
+  position: absolute;
+  right: 0.5vw;
+  bottom: 0.5vw;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -36,10 +40,11 @@
     width: 18vw;
   }
 
-  .remove-btn {
+  .icon-link .remove-btn {
+    visibility: visible;
     height: 4vw;
     width: 4vw;
-    right: 4vw;
-    bottom: 0;
+    right: 0;
+    bottom: 0.5vw;
   }
 }
