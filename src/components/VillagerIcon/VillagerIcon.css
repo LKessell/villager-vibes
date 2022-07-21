@@ -1,4 +1,4 @@
-.icon-wrapper .remove-btn {
+.icon-link .remove-btn {
   visibility: hidden;
   border: none;
   border-radius: 50%;
@@ -26,7 +26,8 @@
   transform: translateY(-2px);
 }
 
-.icon-wrapper:hover .remove-btn {
+.icon-link:hover .remove-btn,
+.icon-link:focus-within .remove-btn {
   visibility: visible;
 }
 
