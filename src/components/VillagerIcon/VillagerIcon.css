@@ -1,4 +1,5 @@
-.remove-btn {
+.icon-wrapper .remove-btn {
+  visibility: hidden;
   border: none;
   border-radius: 50%;
   background: url("../../assets/remove.png");
@@ -23,6 +24,10 @@
 
 .villager-icon:hover {
   transform: translateY(-2px);
+}
+
+.icon-wrapper:hover .remove-btn {
+  visibility: visible;
 }
 
 @media screen and (max-width: 680px) {
