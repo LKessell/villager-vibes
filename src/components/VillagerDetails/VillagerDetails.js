@@ -7,6 +7,8 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   const [currentVillager, setCurrentVillager] = useState({});
   const pronoun = data.gender === "Female" ? "She" : "He";
   const isWishlistFull = wishlist.length >= 10;
+  const isOnWishlist = wishlist.includes(currentVillager);
+  const canAddVillager = !isWishlistFull && !isOnWishlist;
 
   const nameStyle = {
     backgroundColor: data["bubble-color"],
@@ -20,7 +22,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
   }, [currentVillager, data]);
 
   const addToWishlist = () => {
-    if (!wishlist.includes(currentVillager) && wishlist.length < 10) {
+    if (canAddVillager) {
       setWishlist([currentVillager, ...wishlist]);
     }
   };
@@ -62,16 +64,21 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
           Ew, NO!
         </Link>
         <Link
-          aria-disabled={isWishlistFull}
+          aria-disabled={!canAddVillager}
           to="/wishlist"
-          className={`add-wishlist-btn ${isWishlistFull ? "add-disabled" : ""}`}
+          className={`add-wishlist-btn ${
+            !canAddVillager ? "add-disabled" : ""
+          }`}
           id={data.id}
           onClick={addToWishlist}
         >
           {`${pronoun}'s my FAVE!`}
         </Link>
       </div>
-      {isWishlistFull && <p>Your wishlist is full!</p>}
+      {isWishlistFull && !isOnWishlist && <p>Your wishlist is full!</p>}
+      {isOnWishlist && (
+        <p>{data.name["name-USen"]} is already on your wishlist!</p>
+      )}
     </section>
   );
 };
