@@ -37,13 +37,13 @@
 
 @media screen and (max-width: 680px) {
   .villager-icon {
-    width: 18vw;
+    width: 24vw;
   }
 
   .icon-link .remove-btn {
     visibility: visible;
-    height: 4vw;
-    width: 4vw;
+    height: 5vw;
+    width: 5vw;
     right: 0;
     bottom: 0.5vw;
   }
