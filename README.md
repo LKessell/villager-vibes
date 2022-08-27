@@ -29,7 +29,7 @@ Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wi
 - Thoroughly test user flows using Cypress
 - Handle multi-page functionality using React Router
 
-## App Setup
+## App Download & Setup
 
 In the new Terminal window, run the following commands:
 
@@ -45,7 +45,7 @@ I wanted to keep the interface simple for this app, and mimic some of the menu s
 I also created some custom background images, which was a fun artistic experiment. There's a lot of room for future growth in this project, and I plan to continue making improvements.
 
 ## Future Additions
-- Add a warning message when a user tries to add a villager and their wishlist is full
+- ~~Add a warning message when a user tries to add a villager and their wishlist is full~~
 - Save wishlist data in localStorage so it will persist on page refresh
 - Allow users to reorder villagers while viewing the wishlist
 - Allow users to create multiple wishlists
