@@ -1,8 +1,18 @@
-.remove-btn {
-  height: 2vw;
+.icon-link {
   position: relative;
-  right: 2.5vw;
-  bottom: 1vw;
+}
+
+.icon-link .remove-btn {
+  visibility: hidden;
+  border: none;
+  border-radius: 50%;
+  background: url("../../assets/remove.png");
+  background-size: contain;
+  height: 2vw;
+  width: 2vw;
+  position: absolute;
+  right: 0.5vw;
+  bottom: 0.5vw;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -20,14 +30,21 @@
   transform: translateY(-2px);
 }
 
+.icon-link:hover .remove-btn,
+.icon-link:focus-within .remove-btn {
+  visibility: visible;
+}
+
 @media screen and (max-width: 680px) {
   .villager-icon {
-    width: 18vw;
+    width: 24vw;
   }
 
-  .remove-btn {
-    height: 4vw;
-    right: 4vw;
-    bottom: 0;
+  .icon-link .remove-btn {
+    visibility: visible;
+    height: 5vw;
+    width: 5vw;
+    right: 0;
+    bottom: 0.5vw;
   }
 }
