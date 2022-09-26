@@ -36,7 +36,7 @@ dd {
 }
 
 .detail-photo {
-  width: auto;
+  width: inherit;
 }
 
 .details-back-btn {
@@ -100,5 +100,7 @@ dd {
 
   .detail-photo-wrapper {
     margin-bottom: 3vw;
+    height: 180px;
+    width: 180px;
   }
 }
