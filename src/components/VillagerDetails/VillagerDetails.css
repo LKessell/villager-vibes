@@ -28,15 +28,16 @@ dd {
 }
 
 .detail-photo-wrapper {
+  background-color: cornsilk;
   border-radius: 2vw;
   overflow: hidden;
   height: 256px;
   width: 256px;
 }
 
-/* .detail-photo {
-  border-radius: 2vw;
-} */
+.detail-photo {
+  width: auto;
+}
 
 .details-back-btn {
   display: inline-block;
@@ -100,8 +101,4 @@ dd {
   .detail-photo-wrapper {
     margin-bottom: 3vw;
   }
-
-  /* .detail-photo {
-    margin-bottom: 3vw;
-  } */
 }
