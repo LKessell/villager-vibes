@@ -27,9 +27,16 @@ dd {
   width: 12vw;
 }
 
-.detail-photo {
+.detail-photo-wrapper {
   border-radius: 2vw;
+  overflow: hidden;
+  height: 256px;
+  width: 256px;
 }
+
+/* .detail-photo {
+  border-radius: 2vw;
+} */
 
 .details-back-btn {
   display: inline-block;
@@ -90,7 +97,11 @@ dd {
     padding: 1.6vw 5vw;
   }
 
-  .detail-photo {
+  .detail-photo-wrapper {
     margin-bottom: 3vw;
   }
+
+  /* .detail-photo {
+    margin-bottom: 3vw;
+  } */
 }
