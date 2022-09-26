@@ -32,7 +32,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
       <div className="detail-photo-wrapper">
         <img
           src={`https://acnhapi.com/v1/images/villagers/${data.id}`}
-          alt=""
+          alt={`Portrait of ${data.name["name-USen"]}`}
           className="detail-photo"
         />
       </div>
