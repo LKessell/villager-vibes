@@ -22,14 +22,22 @@ dd {
 
 .details-name {
   border-radius: 2vw;
+  font-size: larger;
   padding: 0.8vw;
   margin: 1vw;
   width: 12vw;
 }
 
-.detail-photo {
+.detail-photo-wrapper {
+  background-color: cornsilk;
   border-radius: 2vw;
-  max-width: 25vw;
+  overflow: hidden;
+  height: 256px;
+  width: 256px;
+}
+
+.detail-photo {
+  width: inherit;
 }
 
 .details-back-btn {
@@ -91,8 +99,9 @@ dd {
     padding: 1.6vw 5vw;
   }
 
-  .detail-photo {
-    max-width: 40vw;
+  .detail-photo-wrapper {
     margin-bottom: 3vw;
+    height: 180px;
+    width: 180px;
   }
 }
