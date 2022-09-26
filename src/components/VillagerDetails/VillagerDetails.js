@@ -36,9 +36,9 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
           className="detail-photo"
         />
       </div>
-      <h3 className="details-name" style={nameStyle}>
+      <h2 className="details-name" style={nameStyle}>
         {data.name["name-USen"]}
-      </h3>
+      </h2>
       <dl>
         <div>
           <dt>Species</dt>
