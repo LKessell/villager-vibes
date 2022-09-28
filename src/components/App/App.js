@@ -12,7 +12,9 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 const App = () => {
   const [allVillagers, setAllVillagers] = useState([]);
   const [displayedVillagers, setDisplayedVillagers] = useState([]);
-  const [wishlist, setWishlist] = useState([]);
+  const [wishlist, setWishlist] = useState(
+    JSON.parse(localStorage.getItem("villager-wishlist")) ?? []
+  );
   const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
