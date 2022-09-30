@@ -58,14 +58,15 @@ describe("Wishlist user flows", () => {
   });
 
   // Note: Cypress currently does not support CSS :hover states
-  // The remove button is only visible when hovering over a villager icon
+  // The remove button is visible when a villager icon is hovered or focused
   // https://github.com/cypress-io/cypress/issues/3222
 
-  // it("Should have a remove button for villagers on the wishlist", () => {
-  //   cy.get("#140").click();
-  //   cy.get(".add-wishlist-btn").click();
-  //   cy.get("#rem-140").should("be.visible");
-  // });
+  it("Should have a remove button for villagers on the wishlist", () => {
+    cy.get("#140").click();
+    cy.get(".add-wishlist-btn").click();
+    cy.get(".icon-link").first().focus();
+    cy.get("#rem-140").should("be.visible");
+  });
 
   it("Can remove a villager from the wishlist by clicking the remove button", () => {
     cy.get("#155").click();
