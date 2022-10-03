@@ -46,7 +46,7 @@ I also created some custom background images, which was a fun artistic experimen
 
 ## Future Additions
 - ~~Add a warning message when a user tries to add a villager and their wishlist is full~~
-- Save wishlist data in localStorage so it will persist on page refresh
+- ~~Save wishlist data in localStorage so it will persist on page refresh~~
 - Allow users to reorder villagers while viewing the wishlist
 - Allow users to create multiple wishlists
 
