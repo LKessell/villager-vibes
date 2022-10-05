@@ -1,8 +1,11 @@
 import "./VillagerIcon.css";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const removeVillager = (e) => {
     e.preventDefault();
 
@@ -16,7 +19,13 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
   return (
     <Link to={`/villagers/${id}`} className="icon-link">
       <div>
-        <img src={img} id={id} alt={altText} className="villager-icon" />
+        <img
+          src={img}
+          id={id}
+          alt={altText}
+          className="villager-icon"
+          onLoad={() => setIsLoading(false)}
+        />
         {type === "wishlist" && (
           <button
             aria-label="Remove from wishlist"
@@ -25,7 +34,10 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
             onClick={(e) => removeVillager(e)}
           />
         )}
-        <span className="icon-placeholder"></span>
+        <span
+          className="icon-placeholder"
+          style={{ display: isLoading ? "inline-block" : "none" }}
+        ></span>
       </div>
     </Link>
   );
