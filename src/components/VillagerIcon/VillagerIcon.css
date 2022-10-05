@@ -23,6 +23,7 @@
 
 .villager-icon {
   transition: transform 0.2s;
+  height: 8vw;
   width: 8vw;
 }
 
@@ -39,7 +40,7 @@
   background-color: cornsilk;
   height: 6vw;
   width: 6vw;
-  border-radius: 60%;
+  border-radius: 50%;
   position: absolute;
   left: 1vw;
   top: 1vw;
@@ -48,6 +49,7 @@
 @media screen and (max-width: 680px) {
   .villager-icon {
     width: 24vw;
+    height: 24vw;
   }
 
   .icon-link .remove-btn {
@@ -56,5 +58,12 @@
     width: 5vw;
     right: 0;
     bottom: 0.5vw;
+  }
+
+  .icon-placeholder {
+    height: 18vw;
+    width: 18vw;
+    left: 3vw;
+    top: 3vw;
   }
 }
