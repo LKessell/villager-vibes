@@ -35,6 +35,16 @@
   visibility: visible;
 }
 
+.icon-placeholder {
+  background-color: cornsilk;
+  height: 6vw;
+  width: 6vw;
+  border-radius: 60%;
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+}
+
 @media screen and (max-width: 680px) {
   .villager-icon {
     width: 24vw;
