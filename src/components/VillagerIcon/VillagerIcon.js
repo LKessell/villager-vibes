@@ -25,6 +25,7 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
           alt={altText}
           className="villager-icon"
           onLoad={() => setIsLoading(false)}
+          style={{ opacity: isLoading ? 0 : 1 }}
         />
         {type === "wishlist" && (
           <button
