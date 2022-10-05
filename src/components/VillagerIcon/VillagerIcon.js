@@ -25,6 +25,7 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
             onClick={(e) => removeVillager(e)}
           />
         )}
+        <span className="icon-placeholder"></span>
       </div>
     </Link>
   );
