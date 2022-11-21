@@ -9,13 +9,12 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
-[![LKessell](https://circleci.com/gh/LKessell/villager-vibes.svg?style=svg)](https://app.circleci.com/pipelines/github/LKessell/villager-vibes)
 
 Villager Vibes is my final solo project completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we have learned throughout the module for React, Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
 
 Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wishlist of their favorite villagers. On the dashboard, users can view a list of all villagers, or filter them by species. Users can click a villager to view more of their details, then add them to the wishlist if they choose. Villagers can also be removed from the wishlist by clicking a red icon.
 
-## View the deployed app [Here on Heroku](https://villager-vibes.herokuapp.com/)!
+## View the deployed app [Here](https://villager-vibes.vercel.app/)!
 
 <p>
   <img height="400" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/128792908-8980f443-2cc4-453a-b1fe-3716be2c24c8.png">
