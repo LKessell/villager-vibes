@@ -9,6 +9,8 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/LKessell/villager-vibes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/LKessell/villager-vibes/tree/main)
 
 Villager Vibes is my final solo project completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we have learned throughout the module for React, Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
 
@@ -57,3 +59,4 @@ I also created some custom background images, which was a fun artistic experimen
 Inspired by Animal Crossing: New Horizons and [this island name generator](https://acnh-namegen.herokuapp.com/)  
 Villager data and images from the [ACNH API](https://acnhapi.com/)  
 Other icons from Freepik on [flaticon.com](https://www.flaticon.com/)
+Markdown badges by [Ileriayo](https://github.com/Ileriayo/markdown-badges)
