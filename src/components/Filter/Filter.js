@@ -3,7 +3,7 @@ import './Filter.css';
 import PropTypes from 'prop-types';
 
 const Filter = ({ allVillagers, setDisplayedVillagers }) => {
-  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [selectedFilter, setSelectedFilter] = useState('All');
 
   const allFilters = allVillagers
     .reduce(
@@ -17,7 +17,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     )
     .sort();
 
-  const speciesFilters = allFilters.map((filter) => {
+  const filterButtons = allFilters.map((filter) => {
     return (
       <label key={filter}>
         <input type="radio" className="radio-bubble" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
@@ -27,7 +27,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   });
 
   useEffect(() => {
-    const filteredResults = allVillagers.filter((villager) => villager.species === selectedFilter || selectedFilter === 'all');
+    const filteredResults = allVillagers.filter((villager) => villager.species === selectedFilter || selectedFilter === 'All');
     setDisplayedVillagers(filteredResults);
   }, [allVillagers, selectedFilter, setDisplayedVillagers]);
 
@@ -35,10 +35,10 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     <section className="filter-container box">
       <h2 className="filter-title">I'm vibing with...</h2>
       <label>
-        <input type="radio" className="radio-bubble" id="all" checked={selectedFilter === 'all'} onChange={(event) => setSelectedFilter(event.target.id)} />
+        <input type="radio" className="radio-bubble" id="all" checked={selectedFilter === 'All'} onChange={(event) => setSelectedFilter(event.target.id)} />
         All Villagers
       </label>
-      {speciesFilters}
+      {filterButtons}
     </section>
   );
 };
