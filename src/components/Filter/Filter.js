@@ -21,7 +21,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     return (
       <label key={filter}>
         <input type="radio" className="radio-bubble" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
-        {`${filter}`}
+        {filter === 'All' ? 'All Villagers' : `${filter}`}
       </label>
     );
   });
