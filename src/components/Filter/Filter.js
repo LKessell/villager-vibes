@@ -19,10 +19,12 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
 
   const filterButtons = allFilters.map((filter) => {
     return (
-      <label key={filter}>
-        <input type="radio" className="radio-bubble" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
-        {filter === 'All' ? 'All Villagers' : `${filter}`}
-      </label>
+      <li key={filter}>
+        <label>
+          <input type="radio" className="radio-bubble" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
+          {filter === 'All' ? 'All Villagers' : `${filter}`}
+        </label>
+      </li>
     );
   });
 
@@ -34,7 +36,7 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   return (
     <section className="filter-container box">
       <h2 className="filter-title">I'm vibing with...</h2>
-      {filterButtons}
+      <ul>{filterButtons}</ul>
     </section>
   );
 };
