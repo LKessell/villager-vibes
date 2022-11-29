@@ -34,10 +34,6 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   return (
     <section className="filter-container box">
       <h2 className="filter-title">I'm vibing with...</h2>
-      <label>
-        <input type="radio" className="radio-bubble" id="all" checked={selectedFilter === 'All'} onChange={(event) => setSelectedFilter(event.target.id)} />
-        All Villagers
-      </label>
       {filterButtons}
     </section>
   );
