@@ -11,13 +11,13 @@ describe('Dashboard user flows', () => {
     });
   });
 
-  it('Should be able to visit http://localhost:3000/', () => {
+  it('Should be able to visit the homepage', () => {
     cy.visit('http://localhost:3000/').contains('Villager Vibes');
   });
 
   it('Should show a loading message while data is loading', () => {
     let sendResponse;
-    const trigger = new Promise(resolve => {
+    const trigger = new Promise((resolve) => {
       sendResponse = resolve;
     });
     cy.fixture('sampleVillagers').then((villagersData) => {
@@ -50,7 +50,7 @@ describe('Dashboard user flows', () => {
     cy.get('.nav-wishlist').should('not.have.class', 'active');
   });
 
-  it('Should contain a list of filters for villager species', () => {
+  it('Should contain a list of filters for villager species on desktop screens', () => {
     cy.visit('http://localhost:3000/');
     cy.get('label').contains('All Villagers');
     cy.get('#Duck').should('exist');
