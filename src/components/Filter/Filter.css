@@ -17,10 +17,11 @@ li {
 }
 
 input {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
-label {
+.radio-bubble {
   display: inline-block;
   margin: 0.5vw;
   border: 2px solid #5db7b5;
@@ -34,7 +35,8 @@ label {
   transition: border 0.2s;
 }
 
-label:hover {
+.radio-bubble:hover,
+.radio-bubble:focus-within {
   border: 2px solid white;
 }
 
@@ -46,7 +48,7 @@ label:hover {
     font-size: 3.5vw;
   }
 
-  label {
+  .radio-bubble {
     font-size: 3vw;
     padding: 0.8vw 2.2vw;
   }
