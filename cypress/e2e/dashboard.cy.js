@@ -76,6 +76,13 @@ describe('Dashboard user flows', () => {
     cy.get('#155').should('be.visible');
   });
 
+  it('Should show a dropdown menu instead of filters on mobile devices', () => {
+    cy.viewport('iphone-x');
+    cy.visit('http://localhost:3000/');
+    cy.get('.bubble-filter').should('not.be.visible');
+    cy.get('.mobile-filter').should('be.visible');
+  });
+
   it('Can click a villager icon to move to the details page', () => {
     cy.visit('http://localhost:3000/');
     cy.get('#140').click();
