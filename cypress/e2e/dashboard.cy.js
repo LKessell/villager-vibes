@@ -11,13 +11,13 @@ describe('Dashboard user flows', () => {
     });
   });
 
-  it('Should be able to visit http://localhost:3000/', () => {
+  it('Should be able to visit the homepage', () => {
     cy.visit('http://localhost:3000/').contains('Villager Vibes');
   });
 
   it('Should show a loading message while data is loading', () => {
     let sendResponse;
-    const trigger = new Promise(resolve => {
+    const trigger = new Promise((resolve) => {
       sendResponse = resolve;
     });
     cy.fixture('sampleVillagers').then((villagersData) => {
@@ -50,7 +50,7 @@ describe('Dashboard user flows', () => {
     cy.get('.nav-wishlist').should('not.have.class', 'active');
   });
 
-  it('Should contain a list of filters for villager species', () => {
+  it('Should contain a list of filters for villager species on desktop screens', () => {
     cy.visit('http://localhost:3000/');
     cy.get('label').contains('All Villagers');
     cy.get('#Duck').should('exist');
@@ -74,6 +74,23 @@ describe('Dashboard user flows', () => {
     cy.contains('All Villagers').click();
     cy.get('#140').should('be.visible');
     cy.get('#155').should('be.visible');
+  });
+
+  it('Should show a dropdown menu instead of filters on mobile devices', () => {
+    cy.viewport('iphone-x');
+    cy.visit('http://localhost:3000/');
+    cy.get('.bubble-filter').should('not.be.visible');
+    cy.get('.mobile-filter').should('be.visible');
+  });
+
+  it('Should be able to filter villagers by selecting an option from the dropdown', () => {
+    cy.viewport('iphone-x');
+    cy.visit('http://localhost:3000/');
+    cy.get('#140').should('be.visible');
+    cy.get('.mobile-filter').select('Wolf');
+    cy.get('.mobile-filter').should('have.value', 'Wolf');
+    cy.get('#384').should('be.visible');
+    cy.get('#140').should('not.exist');
   });
 
   it('Can click a villager icon to move to the details page', () => {

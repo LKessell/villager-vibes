@@ -3,56 +3,58 @@ import './Filter.css';
 import PropTypes from 'prop-types';
 
 const Filter = ({ allVillagers, setDisplayedVillagers }) => {
-  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [selectedFilter, setSelectedFilter] = useState('All');
 
-  const allFilters = allVillagers.reduce((filters, villager) => {
-    if (!filters.includes(villager.species)) {
-      filters.push(villager.species);
-    }
-    return filters.sort();
-  }, []);
+  const allFilters = allVillagers
+    .reduce(
+      (filters, villager) => {
+        if (!filters.includes(villager.species)) {
+          filters.push(villager.species);
+        }
+        return filters;
+      },
+      ['All']
+    )
+    .sort();
 
-  const speciesFilters = allFilters.map(filter => {
+  const filterButtons = allFilters.map((filter) => {
     return (
-      <label key={filter}>
-        <input
-          type='radio'
-          className='radio-bubble'
-          id={`${filter}`}
-          checked={selectedFilter === filter}
-          onChange={event => setSelectedFilter(event.target.id)}
-        />
-        {`${filter}`}
-      </label>
+      <li key={filter}>
+        <label className="radio-bubble">
+          <input type="radio" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
+          {filter === 'All' ? 'All Villagers' : `${filter}`}
+        </label>
+      </li>
     );
   });
-  
+
+  const selectOptions = allFilters.map((filter) => {
+    return (
+      <option key={`option${filter}`} value={filter}>
+        {filter === 'All' ? 'All Villagers' : `${filter}`}
+      </option>
+    );
+  });
+
   useEffect(() => {
-    const filteredResults = allVillagers.filter(villager => villager.species === selectedFilter || selectedFilter === 'all');
+    const filteredResults = allVillagers.filter((villager) => villager.species === selectedFilter || selectedFilter === 'All');
     setDisplayedVillagers(filteredResults);
   }, [allVillagers, selectedFilter, setDisplayedVillagers]);
 
   return (
-    <section className='filter-container box'>
-      <h2 className='filter-title'>I'm vibing with...</h2>
-      <label>
-        <input
-          type='radio'
-          className='radio-bubble'
-          id='all'
-          checked={selectedFilter === 'all'}
-          onChange={event => setSelectedFilter(event.target.id)}
-        />
-      All Villagers
-      </label>
-      {speciesFilters}
+    <section className="filter-container box">
+      <h2 className="filter-title">I'm vibing with...</h2>
+      <ul className="bubble-filter">{filterButtons}</ul>
+      <select className="mobile-filter" onChange={(event) => setSelectedFilter(event.target.value)} value={selectedFilter}>
+        {selectOptions}
+      </select>
     </section>
   );
-}
+};
 
 export default Filter;
 
 Filter.propTypes = {
   displayedVillagers: PropTypes.array,
-  setDisplayedVillagers: PropTypes.func
-}
+  setDisplayedVillagers: PropTypes.func,
+};

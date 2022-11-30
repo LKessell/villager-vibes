@@ -7,11 +7,21 @@
   margin-bottom: 1vw;
 }
 
-input {
-  display: none;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-label {
+li {
+  display: inline-block;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-bubble {
   display: inline-block;
   margin: 0.5vw;
   border: 2px solid #5db7b5;
@@ -25,8 +35,13 @@ label {
   transition: border 0.2s;
 }
 
-label:hover {
+.radio-bubble:hover,
+.radio-bubble:focus-within {
   border: 2px solid white;
+}
+
+.mobile-filter {
+  display: none;
 }
 
 @media screen and (max-width: 680px) {
@@ -37,8 +52,23 @@ label:hover {
     font-size: 3.5vw;
   }
 
-  label {
-    font-size: 3vw;
-    padding: 0.8vw 2.2vw;
+  .filter-title {
+    padding: 1vw 6vw;
+  }
+
+  .mobile-filter {
+    border: 2px solid #5db7b5;
+    background-color: #5db7b5;
+    color: #ffffff;
+    border-radius: 2vw;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 5vw;
+    margin-bottom: 1vw;
+    padding: 2vw;
+  }
+
+  .bubble-filter {
+    display: none;
   }
 }
