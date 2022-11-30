@@ -3,6 +3,10 @@
   height: auto;
 }
 
+.filter-title {
+  margin-bottom: 1vw;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -10,10 +14,6 @@ ul {
 
 li {
   display: inline-block;
-}
-
-.filter-title {
-  margin-bottom: 1vw;
 }
 
 input {
@@ -40,6 +40,10 @@ input {
   border: 2px solid white;
 }
 
+.mobile-filter {
+  display: none;
+}
+
 @media screen and (max-width: 680px) {
   .filter-container {
     max-width: 80vw;
@@ -48,8 +52,23 @@ input {
     font-size: 3.5vw;
   }
 
-  .radio-bubble {
-    font-size: 3vw;
-    padding: 0.8vw 2.2vw;
+  .filter-title {
+    padding: 1vw 6vw;
+  }
+
+  .mobile-filter {
+    border: 2px solid #5db7b5;
+    background-color: #5db7b5;
+    color: #ffffff;
+    border-radius: 2vw;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 5vw;
+    margin-bottom: 1vw;
+    padding: 2vw;
+  }
+
+  .bubble-filter {
+    display: none;
   }
 }
