@@ -83,6 +83,16 @@ describe('Dashboard user flows', () => {
     cy.get('.mobile-filter').should('be.visible');
   });
 
+  it('Should be able to filter villagers by selecting an option from the dropdown', () => {
+    cy.viewport('iphone-x');
+    cy.visit('http://localhost:3000/');
+    cy.get('#140').should('be.visible');
+    cy.get('.mobile-filter').select('Wolf');
+    cy.get('.mobile-filter').should('have.value', 'Wolf');
+    cy.get('#384').should('be.visible');
+    cy.get('#140').should('not.exist');
+  });
+
   it('Can click a villager icon to move to the details page', () => {
     cy.visit('http://localhost:3000/');
     cy.get('#140').click();
