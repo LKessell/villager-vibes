@@ -28,6 +28,14 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     );
   });
 
+  const selectOptions = allFilters.map((filter) => {
+    return (
+      <option key={`option${filter}`} value={filter}>
+        {filter === 'All' ? 'All Villagers' : `${filter}`}
+      </option>
+    );
+  });
+
   useEffect(() => {
     const filteredResults = allVillagers.filter((villager) => villager.species === selectedFilter || selectedFilter === 'All');
     setDisplayedVillagers(filteredResults);
@@ -36,7 +44,10 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   return (
     <section className="filter-container box">
       <h2 className="filter-title">I'm vibing with...</h2>
-      <ul>{filterButtons}</ul>
+      <ul className="bubble-filter">{filterButtons}</ul>
+      <select className="mobile-filter" onChange={(event) => setSelectedFilter(event.target.value)} value={selectedFilter}>
+        {selectOptions}
+      </select>
     </section>
   );
 };
