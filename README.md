@@ -12,14 +12,14 @@
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/LKessell/villager-vibes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/LKessell/villager-vibes/tree/main)
 
-Villager Vibes is my final solo project completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we have learned throughout the module for React, Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
+Villager Vibes was my final solo project completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we learned throughout the module for React, Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
 
 Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wishlist of their favorite villagers. On the dashboard, users can view a list of all villagers, or filter them by species. Users can click a villager to view more of their details, then add them to the wishlist if they choose. Villagers can also be removed from the wishlist by clicking a red icon.
 
 ## View the deployed app [Here](https://villager-vibes.vercel.app/)!
 
 <p>
-  <img height="400" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/128792908-8980f443-2cc4-453a-b1fe-3716be2c24c8.png">
+  <img height="400" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/204909167-4a28c29a-bb98-4835-ac22-ed376b5e955e.png">
   <img height="400" alt="Tablet wishlist" src="https://user-images.githubusercontent.com/77205456/128793004-996f16d5-9a74-45b1-805f-49f5cdb65393.png">
   <img height="400" alt="Mobile villager details" src="https://user-images.githubusercontent.com/77205456/128794910-1344f009-1428-4930-a146-d879b0976ddf.png">
 </p>
