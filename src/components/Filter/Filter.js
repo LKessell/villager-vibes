@@ -20,8 +20,8 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   const filterButtons = allFilters.map((filter) => {
     return (
       <li key={filter}>
-        <label>
-          <input type="radio" className="radio-bubble" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
+        <label className="radio-bubble">
+          <input type="radio" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
           {filter === 'All' ? 'All Villagers' : `${filter}`}
         </label>
       </li>
