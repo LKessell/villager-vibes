@@ -6,7 +6,7 @@
   visibility: hidden;
   border: none;
   border-radius: 50%;
-  background: url("../../assets/remove.png");
+  background: url('../../assets/remove.png');
   background-size: contain;
   height: 2vw;
   width: 2vw;
@@ -37,6 +37,7 @@
 }
 
 .icon-placeholder {
+  animation: 0.8s infinite alternate fadein;
   background-color: cornsilk;
   height: 6vw;
   width: 6vw;
@@ -65,5 +66,14 @@
     width: 18vw;
     left: 3vw;
     top: 3vw;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
