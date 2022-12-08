@@ -1,6 +1,6 @@
 <h1 align="center">🏝 Villager Vibes 🏝</h1>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/77205456/128792545-373fb7ba-4635-4e38-b41b-ec899a1d44b9.gif"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/77205456/206552261-b4798650-97ff-408d-8c8b-4c0934bc8486.gif"></p>
 
 ## Project Overview
 
@@ -20,8 +20,8 @@ Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wi
 
 <p>
   <img height="400" alt="Mobile app dashboard" src="https://user-images.githubusercontent.com/77205456/204909167-4a28c29a-bb98-4835-ac22-ed376b5e955e.png">
-  <img height="400" alt="Tablet wishlist" src="https://user-images.githubusercontent.com/77205456/128793004-996f16d5-9a74-45b1-805f-49f5cdb65393.png">
-  <img height="400" alt="Mobile villager details" src="https://user-images.githubusercontent.com/77205456/128794910-1344f009-1428-4930-a146-d879b0976ddf.png">
+  <img height="400" alt="Tablet wishlist" src="https://user-images.githubusercontent.com/77205456/206552376-affc4e23-5ced-4b5f-8779-e362197d2a9e.png">
+  <img height="400" alt="Mobile villager details" src="https://user-images.githubusercontent.com/77205456/206552481-33e5f41a-1cd3-4ab7-8909-0955dab11828.png">
 </p>
 
 ## Learning Goals
