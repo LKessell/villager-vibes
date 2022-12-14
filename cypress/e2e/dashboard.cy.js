@@ -28,10 +28,11 @@ describe('Dashboard user flows', () => {
       });
     });
     cy.visit('http://localhost:3000/').contains('Loading villagers...');
+    sendResponse();
+    cy.get('h2').contains('Loading villagers...').should('not.exist');
   });
 
   it('Should show a list of villager icons on the dashboard', () => {
-    cy.wait(1000);
     cy.visit('http://localhost:3000/');
     cy.get('#155').should('be.visible');
     cy.get('#384').should('be.visible');
