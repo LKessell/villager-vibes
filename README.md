@@ -5,6 +5,7 @@
 ## Project Overview
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -12,9 +13,11 @@
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/LKessell/villager-vibes/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/LKessell/villager-vibes/tree/main)
 
-Villager Vibes was my final solo project completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we learned throughout the module for React, Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
+Villager Vibes was my final solo project initially completed during Mod 3 at the Turing School or Software and Design. This project was intended to showcase the skills that we learned throughout the module for React, React Router, and Cypress. During the planning stage, we chose a "niche audience" to cater to while building the app, which would help shape the functionality and styling. I geared my app toward "Judgemental Animal Crossing fans who love ranking villagers."
 
 Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wishlist of their favorite villagers. On the dashboard, users can view a list of all villagers, or filter them by species. Users can click a villager to view more of their details, then add them to the wishlist if they choose. Villagers can also be removed from the wishlist by clicking a red icon.
+
+This app was originally built in approximately one week, but I have continued making changes and improvements. I never had the chance to experiment with TypeScript while attending Turing, and this app seemed like a great candidate to migrate over. I initally utilized PropTypes for some improved error handling, but I'm currently in the process of converting all of the existing files over to TypeScript. It has been a fun learning experience so far!
 
 ## View the deployed app [Here](https://villager-vibes.vercel.app/)!
 
@@ -56,7 +59,7 @@ I also created some custom background images, which was a fun artistic experimen
 
 ## Credits
 
-Inspired by Animal Crossing: New Horizons and [this island name generator](https://acnh-namegen.herokuapp.com/)  
+Inspired by Animal Crossing: New Horizons and [this island name generator](https://twitter.com/gravesounds/status/1237841989720141828)  
 Villager data and images from the [ACNH API](https://acnhapi.com/)  
-Other icons from Freepik on [flaticon.com](https://www.flaticon.com/)
+Other icons from Freepik on [flaticon.com](https://www.flaticon.com/)  
 Markdown badges by [Ileriayo](https://github.com/Ileriayo/markdown-badges)
