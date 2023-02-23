@@ -1,7 +1,6 @@
 import './Wishlist.css';
 import IconContainer from '../IconContainer/IconContainer';
 
-// setWishlist
 const Wishlist = ({
   wishlist,
   setWishlist,
