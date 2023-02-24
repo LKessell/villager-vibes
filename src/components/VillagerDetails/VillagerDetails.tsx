@@ -7,6 +7,7 @@ const VillagerDetails = ({
   wishlist,
   setWishlist,
 }: {
+  data: Villager;
   wishlist: Array<Villager>;
   setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
 }) => {
