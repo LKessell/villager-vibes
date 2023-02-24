@@ -34,7 +34,7 @@ const VillagerIcon = ({
       <div>
         <img
           src={img}
-          id={id}
+          id={`${id}`}
           alt={altText}
           className="villager-icon"
           onLoad={() => setIsLoading(false)}
