@@ -14,6 +14,8 @@ const VillagerIcon = ({
   img: string;
   altText: string;
   type: string;
+  setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+  villagers: Array<Villager>;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
