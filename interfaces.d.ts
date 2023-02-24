@@ -8,5 +8,7 @@ interface Villager {
   image_uri: string;
   name: { 'name-USen': string };
   personality: string;
+  saying: string;
   species: string;
+  'text-color': string;
 }
