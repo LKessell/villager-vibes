@@ -11,7 +11,7 @@ const VillagerDetails = ({
   wishlist: Array<Villager>;
   setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
 }) => {
-  const [currentVillager, setCurrentVillager] = useState({});
+  const [currentVillager, setCurrentVillager] = useState({} as Villager);
   const pronoun = data.gender === 'Female' ? 'She' : 'He';
   const isWishlistFull = wishlist.length >= 10;
   const isOnWishlist = wishlist.includes(currentVillager);
