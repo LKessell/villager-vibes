@@ -1,15 +1,26 @@
-import "./VillagerIcon.css";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import './VillagerIcon.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
+const VillagerIcon = ({
+  id,
+  img,
+  altText,
+  type,
+  setWishlist,
+  villagers,
+}: {
+  id: number;
+  img: string;
+  altText: string;
+  type: string;
+}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const removeVillager = (e) => {
     e.preventDefault();
 
-    const splitID = e.target.id.split("-");
+    const splitID = e.target.id.split('-');
     const numID = parseInt(splitID[1]);
     const newWishlist = villagers.filter((villager) => villager.id !== numID);
 
@@ -27,7 +38,7 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
           onLoad={() => setIsLoading(false)}
           style={{ opacity: isLoading ? 0 : 1 }}
         />
-        {type === "wishlist" && (
+        {type === 'wishlist' && (
           <button
             aria-label="Remove from wishlist"
             className="remove-btn"
@@ -35,22 +46,10 @@ const VillagerIcon = ({ id, img, altText, type, setWishlist, villagers }) => {
             onClick={(e) => removeVillager(e)}
           />
         )}
-        <span
-          className="icon-placeholder"
-          style={{ display: isLoading ? "inline-block" : "none" }}
-        ></span>
+        <span className="icon-placeholder" style={{ display: isLoading ? 'inline-block' : 'none' }}></span>
       </div>
     </Link>
   );
 };
 
 export default VillagerIcon;
-
-VillagerIcon.propTypes = {
-  id: PropTypes.number,
-  img: PropTypes.string,
-  altText: PropTypes.string,
-  type: PropTypes.string,
-  setWishlist: PropTypes.func,
-  villagers: PropTypes.array,
-};
