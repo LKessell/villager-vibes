@@ -2,7 +2,14 @@ import './VillagerDetails.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const VillagerDetails = ({ data, wishlist, setWishlist }) => {
+const VillagerDetails = ({
+  data,
+  wishlist,
+  setWishlist,
+}: {
+  wishlist: Array<Villager>;
+  setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+}) => {
   const [currentVillager, setCurrentVillager] = useState({});
   const pronoun = data.gender === 'Female' ? 'She' : 'He';
   const isWishlistFull = wishlist.length >= 10;
