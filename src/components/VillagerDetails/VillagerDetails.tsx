@@ -76,7 +76,7 @@ const VillagerDetails = ({
           aria-disabled={!canAddVillager}
           to="/wishlist"
           className={`add-wishlist-btn ${!canAddVillager ? 'add-disabled' : ''}`}
-          id={data.id}
+          id={`${data.id}`}
           onClick={addToWishlist}
         >
           {`${pronoun}'s my FAVE!`}
