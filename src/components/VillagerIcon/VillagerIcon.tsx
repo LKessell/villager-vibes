@@ -19,10 +19,10 @@ const VillagerIcon = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
-  const removeVillager = (e) => {
+  const removeVillager = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    const splitID = e.target.id.split('-');
+    const splitID = (e.target as HTMLButtonElement).id.split('-');
     const numID = parseInt(splitID[1]);
     const newWishlist = villagers.filter((villager) => villager.id !== numID);
 
