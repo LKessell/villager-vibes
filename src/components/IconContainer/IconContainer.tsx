@@ -1,7 +1,15 @@
 import './IconContainer.css';
 import VillagerIcon from '../VillagerIcon/VillagerIcon';
 
-const IconContainer = ({ type, villagers, setWishlist }) => {
+const IconContainer = ({
+  type,
+  villagers,
+  setWishlist,
+}: {
+  type: string;
+  villagers: Array<Villager>;
+  setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+}) => {
   const currentVillagers = villagers.map((villager) => {
     return (
       <VillagerIcon
