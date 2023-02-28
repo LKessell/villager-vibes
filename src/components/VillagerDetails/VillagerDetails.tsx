@@ -1,18 +1,25 @@
-import "./VillagerDetails.css";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import './VillagerDetails.css';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const VillagerDetails = ({ data, wishlist, setWishlist }) => {
-  const [currentVillager, setCurrentVillager] = useState({});
-  const pronoun = data.gender === "Female" ? "She" : "He";
+const VillagerDetails = ({
+  data,
+  wishlist,
+  setWishlist,
+}: {
+  data: Villager;
+  wishlist: Array<Villager>;
+  setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+}) => {
+  const [currentVillager, setCurrentVillager] = useState({} as Villager);
+  const pronoun = data.gender === 'Female' ? 'She' : 'He';
   const isWishlistFull = wishlist.length >= 10;
   const isOnWishlist = wishlist.includes(currentVillager);
   const canAddVillager = !isWishlistFull && !isOnWishlist;
 
   const nameStyle = {
-    backgroundColor: data["bubble-color"],
-    color: data["text-color"],
+    backgroundColor: data['bubble-color'],
+    color: data['text-color'],
   };
 
   useEffect(() => {
@@ -32,12 +39,12 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
       <div className="detail-photo-wrapper">
         <img
           src={`https://acnhapi.com/v1/images/villagers/${data.id}`}
-          alt={`Portrait of ${data.name["name-USen"]}`}
+          alt={`Portrait of ${data.name['name-USen']}`}
           className="detail-photo"
         />
       </div>
       <h2 className="details-name" style={nameStyle}>
-        {data.name["name-USen"]}
+        {data.name['name-USen']}
       </h2>
       <dl>
         <div>
@@ -46,7 +53,7 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
         </div>
         <div>
           <dt>Birthday</dt>
-          <dd>{data["birthday-string"]}</dd>
+          <dd>{data['birthday-string']}</dd>
         </div>
         <div>
           <dt>Gender</dt>
@@ -68,27 +75,17 @@ const VillagerDetails = ({ data, wishlist, setWishlist }) => {
         <Link
           aria-disabled={!canAddVillager}
           to="/wishlist"
-          className={`add-wishlist-btn ${
-            !canAddVillager ? "add-disabled" : ""
-          }`}
-          id={data.id}
+          className={`add-wishlist-btn ${!canAddVillager ? 'add-disabled' : ''}`}
+          id={`${data.id}`}
           onClick={addToWishlist}
         >
           {`${pronoun}'s my FAVE!`}
         </Link>
       </div>
       {isWishlistFull && !isOnWishlist && <p>Your wishlist is full!</p>}
-      {isOnWishlist && (
-        <p>{data.name["name-USen"]} is already on your wishlist!</p>
-      )}
+      {isOnWishlist && <p>{data.name['name-USen']} is already on your wishlist!</p>}
     </section>
   );
 };
 
 export default VillagerDetails;
-
-VillagerDetails.propTypes = {
-  data: PropTypes.object,
-  wishlist: PropTypes.array,
-  setWishlist: PropTypes.func,
-};
