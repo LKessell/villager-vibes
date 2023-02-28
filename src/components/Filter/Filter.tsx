@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import './Filter.css';
 
-const Filter = ({ allVillagers, setDisplayedVillagers }) => {
+const Filter = ({
+  allVillagers,
+  setDisplayedVillagers,
+}: {
+  allVillagers: Array<Villager>;
+  setDisplayedVillagers: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+}) => {
   const [selectedFilter, setSelectedFilter] = useState('All');
 
   const allFilters = allVillagers
