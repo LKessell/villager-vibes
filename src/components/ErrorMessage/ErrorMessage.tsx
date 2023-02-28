@@ -1,6 +1,6 @@
 import './ErrorMessage.css';
 
-const ErrorMessage = ({ message }) => {
+const ErrorMessage = ({ message }: { message: string }) => {
   return (
     <section className="error-container box">
       <h2>{message}</h2>
