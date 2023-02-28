@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
 import './Filter.css';
-import PropTypes from 'prop-types';
 
-const Filter = ({ allVillagers, setDisplayedVillagers }) => {
+const Filter = ({
+  allVillagers,
+  setDisplayedVillagers,
+}: {
+  allVillagers: Array<Villager>;
+  setDisplayedVillagers: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+}) => {
   const [selectedFilter, setSelectedFilter] = useState('All');
 
   const allFilters = allVillagers
@@ -21,7 +26,12 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     return (
       <li key={filter}>
         <label className="radio-bubble">
-          <input type="radio" id={`${filter}`} checked={selectedFilter === filter} onChange={(event) => setSelectedFilter(event.target.id)} />
+          <input
+            type="radio"
+            id={`${filter}`}
+            checked={selectedFilter === filter}
+            onChange={(event) => setSelectedFilter(event.target.id)}
+          />
           {filter === 'All' ? 'All Villagers' : `${filter}`}
         </label>
       </li>
@@ -37,7 +47,9 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
   });
 
   useEffect(() => {
-    const filteredResults = allVillagers.filter((villager) => villager.species === selectedFilter || selectedFilter === 'All');
+    const filteredResults = allVillagers.filter(
+      (villager) => villager.species === selectedFilter || selectedFilter === 'All'
+    );
     setDisplayedVillagers(filteredResults);
   }, [allVillagers, selectedFilter, setDisplayedVillagers]);
 
@@ -45,7 +57,11 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
     <section className="filter-container box">
       <h2 className="filter-title">I'm vibing with...</h2>
       <ul className="bubble-filter">{filterButtons}</ul>
-      <select className="mobile-filter" onChange={(event) => setSelectedFilter(event.target.value)} value={selectedFilter}>
+      <select
+        className="mobile-filter"
+        onChange={(event) => setSelectedFilter(event.target.value)}
+        value={selectedFilter}
+      >
         {selectOptions}
       </select>
     </section>
@@ -53,8 +69,3 @@ const Filter = ({ allVillagers, setDisplayedVillagers }) => {
 };
 
 export default Filter;
-
-Filter.propTypes = {
-  displayedVillagers: PropTypes.array,
-  setDisplayedVillagers: PropTypes.func,
-};
