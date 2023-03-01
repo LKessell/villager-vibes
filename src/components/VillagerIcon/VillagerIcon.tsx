@@ -14,7 +14,7 @@ const VillagerIcon = ({
   img: string;
   altText: string;
   type: string;
-  setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+  setWishlist?: React.Dispatch<React.SetStateAction<Array<Villager>>>;
   villagers: Array<Villager>;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,7 @@ const VillagerIcon = ({
     const numID = parseInt(splitID[1]);
     const newWishlist = villagers.filter((villager) => villager.id !== numID);
 
-    setWishlist(newWishlist);
+    if (setWishlist) setWishlist(newWishlist);
   };
 
   return (
