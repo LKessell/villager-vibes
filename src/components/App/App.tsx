@@ -12,11 +12,12 @@ import Wishlist from '../Wishlist/Wishlist';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const App = () => {
+  const localWishlistJson = localStorage.getItem('villager-wishlist');
+  const localWishlist = localWishlistJson ? JSON.parse(localWishlistJson) : null;
+
   const [allVillagers, setAllVillagers] = useState<Array<Villager>>([]);
   const [displayedVillagers, setDisplayedVillagers] = useState<Array<Villager>>([]);
-  const [wishlist, setWishlist] = useState<Array<Villager>>(
-    JSON.parse(localStorage.getItem('villager-wishlist')) ?? []
-  );
+  const [wishlist, setWishlist] = useState<Array<Villager>>(localWishlist ?? []);
   const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
