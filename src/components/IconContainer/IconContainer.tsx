@@ -8,7 +8,7 @@ const IconContainer = ({
 }: {
   type: string;
   villagers: Array<Villager>;
-  setWishlist: React.Dispatch<React.SetStateAction<Array<Villager>>>;
+  setWishlist?: React.Dispatch<React.SetStateAction<Array<Villager>>>;
 }) => {
   const currentVillagers = villagers.map((villager) => {
     return (

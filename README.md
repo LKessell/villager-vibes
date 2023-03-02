@@ -17,7 +17,7 @@ Villager Vibes was my final solo project initially completed during Mod 3 at the
 
 Villager Vibes allows fans of the Animal Crossing series to create a "Top 10" wishlist of their favorite villagers. On the dashboard, users can view a list of all villagers, or filter them by species. Users can click a villager to view more of their details, then add them to the wishlist if they choose. Villagers can also be removed from the wishlist by clicking a red icon.
 
-This app was originally built in approximately one week, but I have continued making changes and improvements. I never had the chance to experiment with TypeScript while attending Turing, and this app seemed like a great candidate to migrate over. I initally utilized PropTypes for some improved error handling, but I'm currently in the process of converting all of the existing files over to TypeScript. It has been a fun learning experience so far!
+This app was originally built in approximately one week, but I have continued making changes and improvements. I initially utilized the [PropTypes](https://www.npmjs.com/package/prop-types) library when building the app, so this project seemed like a good candidate to migrate over to TypeScript for more robust type checking. It was a great learning experience, and TypeScript caught some small inconsistencies in the code that I would have never noticed otherwise!
 
 ## View the deployed app [Here](https://villager-vibes.vercel.app/)!
 
@@ -49,6 +49,8 @@ Open your web browser of choice, then visit `localhost:3000` to view the app!
 
 I wanted to keep the interface simple for this app, and mimic some of the menu styles in-game. Despite the simplicity of the app overall, managing the data for the wishlist proved to be a little tricky. After exploring the Context API in my previous project, I think it could be useful to simplify some of the props being passed. I'd like to explore this option in a future iteration!  
 I also created some custom background images, which was a fun artistic experiment. There's a lot of room for future growth in this project, and I plan to continue making improvements.
+
+I never had the opportunity to experiment with TypeScript during my time at Turing, so migrating to TypeScript was a fun and informative challenge. I enjoyed the opportunity to learn about some of the more common patterns when using TypeScript and React, and I found this [React Cheatsheet](https://react-typescript-cheatsheet.netlify.app/) to be a very handy reference. I was also surprised by how easy the migration process was. TypeScript seems like a powerful tool that I can definitely see myself reaching for in complex projects!
 
 ## Future Additions
 
